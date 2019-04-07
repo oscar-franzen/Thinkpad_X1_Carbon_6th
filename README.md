@@ -71,7 +71,8 @@ sudo update-initramfs -u
 ## Annoying screen flickering
 To get rid of the annoying screen flickering, for example when browsing, the following worked for me.
 
-1. ```bash
+1. Create the following file:
+```bash
 sudo vim /usr/share/X11/xorg.conf.d/20-intel_flicker_fix.conf
 ```
 
