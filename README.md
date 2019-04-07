@@ -46,7 +46,7 @@ I still like and use a Mac keyboard with the TX1C6. Some tweaking is needed for 
 
 1. Clone this repo: [hid-apple-patched](https://github.com/free5lot/hid-apple-patched)
 ```bash
-git clone https://github.com/free5lot/hid-apple-patched
+$ git clone https://github.com/free5lot/hid-apple-patched
 ```
 2. Go to the source directory and run
 ```bash
@@ -69,7 +69,7 @@ options hid_apple fnmode=2                   # Mode of top-row keys should be no
 ```
 5. Apply
 ```bash
-sudo update-initramfs -u
+$ sudo update-initramfs -u
 ```
 
 ## Annoying screen flickering
@@ -77,7 +77,7 @@ To get rid of the annoying screen flickering, for example when browsing, the fol
 
 1. Create another X11 config file:
 ```bash
-sudo vim /usr/share/X11/xorg.conf.d/20-intel_flicker_fix.conf
+$ sudo vim /usr/share/X11/xorg.conf.d/20-intel_flicker_fix.conf
 ```
 
 Add the following lines:
@@ -95,7 +95,7 @@ EndSection
 ## Disable capslock
 Many times I hit capslock by accident so I prefer to have it disabled. It can be achieved by:
 ```bash
-setxkbmap -option 'ctrl:nocaps'
+$ setxkbmap -option 'ctrl:nocaps'
 ```
 
 1. When the computer wakes up from sleep, capslock activates again. A more permanent solution would be to:
@@ -117,7 +117,7 @@ chmod +x script
 
 3. Create a new file:
 ```bash
-sudo vim /usr/lib/pm-utils/sleep.d/99ZZ_disable_capslock
+$ sudo vim /usr/lib/pm-utils/sleep.d/99ZZ_disable_capslock
 ```
 
 And add the following lines:
@@ -131,3 +131,5 @@ esac
 ```
 
 ## Changing shortcut keys for `xfce4-terminal`
+I prefer to be able to open a new terminal tab with `ctrl+t` and close a tab with `ctrl+w`. Fortunately this is easy to fix:
+1. ```$ vim /home/rand/.config/xfce4/terminal/accels.scm```
