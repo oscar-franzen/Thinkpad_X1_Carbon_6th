@@ -173,11 +173,14 @@ sudo apt install libimobiledevice-utils
 
 Then run:
 
-```
+```bash
 idevicepair validate
 idevicepair pair
 ifuse ~/Temp
 cd ~/Temp
 ls
+
+# unmount when done
+fusermount -u ~/Temp
 
 ```
