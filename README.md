@@ -59,9 +59,9 @@ $ sudo vim /etc/modprobe.d/hid_apple.conf
 I use:
 ```
 $ cat /etc/modprobe.d/hid_apple.conf
-options hid_apple swap_opt_cmd=1
-options hid_apple ejectcd_as_delete=1
-options hid_apple fnmode=2
+options hid_apple swap_opt_cmd=1             # Swap the Option ("Alt") and Command ("Flag") keys 
+options hid_apple ejectcd_as_delete=1        # Use Eject-CD key as Delete
+options hid_apple fnmode=2                   # Mode of top-row keys should be normal function keys (not media keys)
 ```
 5. Apply
 ```bash
