@@ -198,3 +198,14 @@ Following suggestion from https://medium.com/@hkdb/ubuntu-18-04-on-lenovo-x1-car
 ```
 sudo apt-get install tlp tlp-rdw acpi-call-dkms tp-smapi-dkms acpi-call-dkms
 ```
+
+### Lenovo throttling script
+* https://github.com/erpalma/throttled
+
+```
+sudo apt install git virtualenv build-essential python3-dev libdbus-glib-1-dev libgirepository1.0-dev libcairo2-dev python3-venv
+
+git clone https://github.com/erpalma/lenovo-throttling-fix.git
+
+sudo ./install.sh
+```
