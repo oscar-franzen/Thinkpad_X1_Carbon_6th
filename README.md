@@ -9,3 +9,4 @@ ThinkPad X1 Carbon 6th
 ```
 
 ## Crucial BIOS update
+The BIOS of the machine needs to be flashed, because unfortunately, the manufacturer has removed support for suspend to RAM support (aka S3 deep sleep). Instead the TX1C6 supports a new sleep macish mode, but the Linux kernel does not, to my understanding, support it yet.
