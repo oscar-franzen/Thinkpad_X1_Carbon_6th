@@ -44,3 +44,10 @@ I still like and use a Mac keyboard with the TX1C6. Some tweaking is needed for 
 ```bash
 git clone https://github.com/free5lot/hid-apple-patched
 ```
+2. Go to the source directory and run
+```bash
+sudo apt install dkms
+sudo dkms add .
+sudo dkms build hid-apple/1.0
+sudo dkms install hid-apple/1.0
+```
