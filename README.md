@@ -8,11 +8,13 @@ $ sudo dmidecode -s system-version
 ThinkPad X1 Carbon 6th
 ```
 
-## Crucial BIOS update
+## Crucial BIOS firmware update
 The BIOS of the machine needs to be updated, because unfortunately, the manufacturer has removed support for suspend to RAM support (aka S3 deep sleep). Instead the TX1C6 supports a new macish sleep mode (where the system can be woken up anytime by software), but the Linux kernel does not to my understanding support it yet. Lenovo later issued a BIOS update for the TX1C6, allowing the use of S3.
 
-First confirm that you need the update (do you see S3 in the list?):
+First confirm that you need the update (do you see S3 in the list? If not, then you need to update to use S3):
 
 ```bash
 $ dmesg | grep -i "acpi: (supports"
 ```
+
+Next, enter bios and change "UEFI/Legacy boot" to "Both" (default is "legacy", which will prevent update of BIOS).
