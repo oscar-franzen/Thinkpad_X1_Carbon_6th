@@ -132,8 +132,8 @@ esac
 
 ## Changing shortcut keys for `xfce4-terminal`
 I prefer to be able to open a new terminal tab with `ctrl+t` and close a tab with `ctrl+w`. Fortunately this is easy to fix:
-1. ```vim /home/rand/.config/xfce4/terminal/accels.scm```
-2. Add
+1. Fire ```vim /home/rand/.config/xfce4/terminal/accels.scm```
+2. Then add
 ```
 (gtk_accel_path "<Actions>/terminal-window/close-tab" "<Primary>w")
 (gtk_accel_path "<Actions>/terminal-window/new-tab" "<Primary>t")
