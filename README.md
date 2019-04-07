@@ -129,3 +129,5 @@ case "$1" in
         /path/to/helper/script
 esac
 ```
+
+## Changing shortcut keys for `xfce4-terminal`
