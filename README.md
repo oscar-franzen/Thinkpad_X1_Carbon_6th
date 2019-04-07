@@ -67,3 +67,22 @@ options hid_apple fnmode=2
 ```bash
 sudo update-initramfs -u
 ```
+
+## Annoying screen flickering
+To get rid of the annoying screen flickering, for example when browsing, the following worked for me.
+
+1. ```bash
+sudo vim /usr/share/X11/xorg.conf.d/20-intel_flicker_fix.conf
+```
+
+Add the following lines:
+```bash
+Section "Device"
+  Identifier  "Intel Graphics"
+  Driver      "intel"
+  Option      "TripleBuffer" "true"
+  Option      "TearFree"     "true"
+EndSection
+```
+
+2. Reboot / Restart X11
