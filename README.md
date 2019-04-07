@@ -93,3 +93,18 @@ Many times I hit capslock by accident so I prefer to have it disabled. It can be
 ```bash
 setxkbmap -option 'ctrl:nocaps'
 ```
+
+1. When the computer wakes up from sleep, capslock activates gain. A more permanent solution would be to:
+```bash
+sudo vim /usr/lib/pm-utils/sleep.d/99ZZ_disable_capslock
+```
+
+2. Add the following lines:
+```bash
+#!/bin/sh
+
+case "$1" in
+    resume)
+        /home/rand/Desktop/stuff/linux/linux_keys
+esac
+```
