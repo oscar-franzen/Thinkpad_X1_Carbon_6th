@@ -23,3 +23,10 @@ $ dmesg | grep -i "acpi: (supports"
 ```bash
  dd if=image.img of=/dev/sdX bs=1M
 ```
+4. Reboot to see it finds the USB stick and follow instructions (you might need to press F12 during boot).
+5. Enter BIOS settings again, go into the power menu, and change "Sleep state" to "Linux"
+6. Reboot to Linux and hopefully it shows:
+```bash
+$ dmesg | grep -i "acpi: (supports"
+ACPI: (supports S0 S3 S4 S5)
+```
