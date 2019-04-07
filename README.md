@@ -94,7 +94,7 @@ Many times I hit capslock by accident so I prefer to have it disabled. It can be
 setxkbmap -option 'ctrl:nocaps'
 ```
 
-1. When the computer wakes up from sleep, capslock activates gain. A more permanent solution would be to:
+1. When the computer wakes up from sleep, capslock activates again. A more permanent solution would be to:
 ```bash
 sudo vim /usr/lib/pm-utils/sleep.d/99ZZ_disable_capslock
 ```
