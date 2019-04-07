@@ -50,8 +50,23 @@ sudo apt install dkms
 sudo dkms add .
 sudo dkms build hid-apple/1.0
 sudo dkms install hid-apple/1.0
+
+3. Choose settings by editing:
 ```
-3. Apply
+$ sudo vim /etc/modprobe.d/hid_apple.conf
+```
+
+I use:
+```
+$ cat /etc/modprobe.d/hid_apple.conf
+options hid_apple swap_opt_cmd=1
+options hid_apple ejectcd_as_delete=1
+options hid_apple fnmode=2
+
+```
+
+```
+5. Apply
 ```bash
 sudo update-initramfs -u
 ```
