@@ -87,3 +87,9 @@ EndSection
 ```
 
 2. Reboot / Restart X11
+
+## Disable capslock
+Many times I hit capslock by accident so I prefer to have it disabled. It can be achieved by:
+```bash
+setxkbmap -option 'ctrl:nocaps'
+```
