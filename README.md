@@ -40,4 +40,4 @@ ACPI: (supports S0 S3 S4 S5)
 ## External Mac keyboard
 I still like and use a Mac keyboard with the TX1C6. Some tweaking is needed for a good experience.
 
-1. Clone this repo: (hid-apple-patched)[https://github.com/free5lot/hid-apple-patched]
+1. Clone this repo: [hid-apple-patched](https://github.com/free5lot/hid-apple-patched)
