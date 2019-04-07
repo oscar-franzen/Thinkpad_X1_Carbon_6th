@@ -17,4 +17,9 @@ First confirm that you need the update (do you see S3 in the list? If not, then 
 $ dmesg | grep -i "acpi: (supports"
 ```
 
-Next, enter bios and change "UEFI/Legacy boot" to "Both" (default is "legacy", which will prevent update of BIOS).
+1. Enter bios and change "UEFI/Legacy boot" to "Both" (default is "legacy", which will prevent update of BIOS).
+2. Download the right ISO at [support.lenovo.com](https://support.lenovo.com)
+3. Copy to a USB stick:
+```bash
+ dd if=image.img of=/dev/sdX bs=1M
+```
