@@ -36,3 +36,8 @@ ACPI: (supports S0 S3 S4 S5)
 2. Add `psmouse.synaptics_intertouch=1` to `GRUB_CMDLINE_LINUX_DEFAULT` in `/etc/default/grub`
 3. `sudo update-grub`
 4. Reboot
+
+## External Mac keyboard
+I still like and use a Mac keyboard with the TX1C6. Some tweaking is needed for a good experience.
+
+1. Clone this repo: (hid-apple-patched)[https://github.com/free5lot/hid-apple-patched]
