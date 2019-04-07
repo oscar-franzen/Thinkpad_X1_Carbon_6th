@@ -32,4 +32,6 @@ ACPI: (supports S0 S3 S4 S5)
 ```
 
 ## Get the Touchpad working
-1. Uncomment the `i2c_i801`module in `/etc/modprobe.d/blacklist.conf`
+1. Uncomment the `i2c_i801` module in `/etc/modprobe.d/blacklist.conf`
+2. Add `psmouse.synaptics_intertouch=1` to `GRUB_CMDLINE_LINUX_DEFAULT` in `/etc/default/grub`
+3. `sudo update-grub`
