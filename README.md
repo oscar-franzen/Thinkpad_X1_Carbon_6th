@@ -189,3 +189,9 @@ ls
 fusermount -u ~/Temp
 
 ```
+## Improving battery life
+Following suggestion from https://medium.com/@hkdb/ubuntu-18-04-on-lenovo-x1-carbon-6g-d99d5667d4d5.
+
+```
+sudo apt-get install tlp tlp-rdw acpi-call-dkms tp-smapi-dkms acpi-call-dkms
+```
