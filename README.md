@@ -160,3 +160,6 @@ chmod +x name.sh
 ```
 
 4. In Xfce4, go to settings -> Keyboard -> Application shortcuts and add the helper script.
+
+## Timemachine-like backups
+Here is a good script for making backups like timemachine: https://github.com/laurent22/rsync-time-backup
