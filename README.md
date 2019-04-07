@@ -33,6 +33,11 @@ $ dmesg | grep -i "acpi: (supports"
 ACPI: (supports S0 S3 S4 S5)
 ```
 
+Try that it works
+```
+systemctl suspend
+```
+
 ## Get the Touchpad to function
 This one is annoying because the system loads into X11 and without a mouse I found it difficult to open a terminal window. I used a USB-connected mouse to open a terminal window.
 
