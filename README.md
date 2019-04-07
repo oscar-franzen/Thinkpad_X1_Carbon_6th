@@ -95,11 +95,8 @@ setxkbmap -option 'ctrl:nocaps'
 ```
 
 1. When the computer wakes up from sleep, capslock activates again. A more permanent solution would be to:
-```bash
-sudo vim /usr/lib/pm-utils/sleep.d/99ZZ_disable_capslock
-```
 
-2. Create a small helper script and place it anywhere:
+Create a small helper script and place it anywhere.
 ```bash
 #!/bin/bash
 
@@ -114,7 +111,12 @@ Make it executable:
 chmod +x script
 ```
 
-2. Add the following lines:
+3. Create a new file:
+```bash
+sudo vim /usr/lib/pm-utils/sleep.d/99ZZ_disable_capslock
+```
+
+And add the following lines:
 ```bash
 #!/bin/sh
 
