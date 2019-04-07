@@ -138,3 +138,25 @@ I prefer to be able to open a new terminal tab with `ctrl+t` and close a tab wit
 (gtk_accel_path "<Actions>/terminal-window/close-tab" "<Primary>w")
 (gtk_accel_path "<Actions>/terminal-window/new-tab" "<Primary>t")
 ```
+
+## Screenshot selection
+I like to be able to press a keyboard combination and then being able to select an area for screenshots.
+
+1. Install scrot
+```bash
+sudo apt install scrot
+```
+
+2. Create a helper script and put it wherever you like:
+```bash
+#!/bin/bash
+sleep 0.5
+/usr/bin/scrot -s
+```
+
+3. Make it executable
+```bash
+chmod +x name.sh
+```
+
+4. In Xfce4, go to settings -> Keyboard -> Application shortcuts and add the helper script.
