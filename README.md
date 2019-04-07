@@ -163,3 +163,21 @@ chmod +x name.sh
 
 ## Timemachine-like backups
 Here is a good script for making backups like timemachine: https://github.com/laurent22/rsync-time-backup
+
+## Mount an iPhone
+iPhones can easily be mounted. First install:
+
+```
+sudo apt install libimobiledevice-utils
+```
+
+Then run:
+
+```
+idevicepair validate
+idevicepair pair
+ifuse ~/Temp
+cd ~/Temp
+ls
+
+```
