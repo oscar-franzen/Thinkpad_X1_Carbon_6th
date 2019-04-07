@@ -30,3 +30,6 @@ $ dmesg | grep -i "acpi: (supports"
 $ dmesg | grep -i "acpi: (supports"
 ACPI: (supports S0 S3 S4 S5)
 ```
+
+## Get the Touchpad working
+1. Uncomment the `i2c_i801`module in `/etc/modprobe.d/blacklist.conf`
