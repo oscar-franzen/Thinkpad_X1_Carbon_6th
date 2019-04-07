@@ -99,12 +99,27 @@ setxkbmap -option 'ctrl:nocaps'
 sudo vim /usr/lib/pm-utils/sleep.d/99ZZ_disable_capslock
 ```
 
+2. Create a small helper script and place it anywhere:
+```bash
+#!/bin/bash
+
+# if capslock is not activated
+if [[ `xset q | grep -P 'Caps Lock:.+?on'` == "" ]]; then
+	# disable capslock
+	((/usr/bin/setxkbmap -option 'ctrl:nocaps') 2>&1) > /dev/null
+fi
+```
+Make it executable:
+```bash
+chmod +x script
+```
+
 2. Add the following lines:
 ```bash
 #!/bin/sh
 
 case "$1" in
     resume)
-        /home/rand/Desktop/stuff/linux/linux_keys
+        /path/to/helper/script
 esac
 ```
