@@ -34,6 +34,8 @@ ACPI: (supports S0 S3 S4 S5)
 ```
 
 ## Get the Touchpad to function
+This one is annoying because the system loads into X11 and without a mouse I found it difficult to open a terminal window. I used a USB-connected mouse to open a terminal window.
+
 1. Uncomment the `i2c_i801` module in `/etc/modprobe.d/blacklist.conf`
 2. Add `psmouse.synaptics_intertouch=1` to `GRUB_CMDLINE_LINUX_DEFAULT` in `/etc/default/grub`
 3. `sudo update-grub`
