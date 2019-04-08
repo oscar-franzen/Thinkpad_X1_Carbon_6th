@@ -213,3 +213,12 @@ Enable it:
 ```
 sudo systemctl enable --now lenovo_fix.service
 ```
+
+### Disable _Memory card slot_ and _Fingerprint reader_ in BIOS
+One [blogpost](https://jonfriesen.ca/blog/lenovo-x1-carbon-and-ubuntu-18.04/) recommends disabling these (these devices are not supported by Linux anyway).
+
+Reboot and enter BIOS settings and change:
+```
+Security -> I/O Post Access -> Memory Card Slot
+Security -> I/O Post Access -> Fingerprint reader
+```
