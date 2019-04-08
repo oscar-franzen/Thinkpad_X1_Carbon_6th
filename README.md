@@ -209,3 +209,7 @@ git clone https://github.com/erpalma/lenovo-throttling-fix.git
 
 sudo ./install.sh
 ```
+Enable it:
+```
+sudo systemctl enable --now lenovo_fix.service
+```
