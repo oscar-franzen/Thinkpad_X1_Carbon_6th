@@ -215,7 +215,7 @@ sudo systemctl enable --now lenovo_fix.service
 ```
 
 ### Disable Memory card slot, Fingerprint reader and WWAN (3G/4G) in BIOS
-One [blogpost](https://jonfriesen.ca/blog/lenovo-x1-carbon-and-ubuntu-18.04/) recommends disabling these (these devices are not supported by Linux anyway).
+One [blogpost](https://jonfriesen.ca/blog/lenovo-x1-carbon-and-ubuntu-18.04/) recommends disabling these (the first two don't have Linux support anyway).
 
 Reboot and enter BIOS settings and change to:
 ```
