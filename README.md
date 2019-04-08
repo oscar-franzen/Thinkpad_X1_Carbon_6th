@@ -14,7 +14,7 @@ ThinkPad X1 Carbon 6th
 * The screen has one dead pixel
 
 ## Crucial BIOS firmware update
-The BIOS of the machine needs to be updated to version 1.30, because unfortunately, the manufacturer has removed support for suspend to RAM support (aka S3 deep sleep). Instead the TX1C6 supports a new macish sleep mode (where the system can be woken up anytime by software), but the Linux kernel does not to my understanding support it yet. Lenovo later issued a BIOS update for the TX1C6, allowing the use of S3.
+The BIOS of the machine needs to be updated to version 1.30, because unfortunately, Lenovo has removed support for suspend to RAM support (aka S3 deep sleep). Instead the TX1C6 supports a new macish sleep mode (where the system can be woken up anytime by software) called Windows Modern Standby mode, but the Linux kernel does not support it yet. Lenovo later issued a BIOS update for the TX1C6, allowing the use of S3.
 
 First confirm that you need the update (do you see S3 in the list? If not, then you need to update to use S3):
 
