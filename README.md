@@ -222,4 +222,7 @@ Reboot and enter BIOS settings and change to:
 Security -> I/O Post Access -> Memory Card Slot -> Disabled
 Security -> I/O Post Access -> Fingerprint reader -> Disabled
 Security -> I/O Post Access -> Wireless WAN -> Disabled
+
+# I also disabled NFC (Near Field Communication for some devices), because I don't know what I would use it for
+Security -> I/O Post Access -> NFC Device -> Disabled
 ```
