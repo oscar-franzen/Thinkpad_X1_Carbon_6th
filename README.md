@@ -281,3 +281,4 @@ setting | set to | what it does
 media.peerconnection.enabled | false | disable Web Real-Time Communication
 geo.enabled | false | false  | disable geolocation tracking
 media.navigator.enabled | false | disable microphone and camera status tracking
+privacy.resistFingerprinting | true | *setting this to true will break google captchas*
