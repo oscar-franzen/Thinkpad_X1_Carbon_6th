@@ -285,7 +285,7 @@ setting | set to | what it does
 `network.cookie.cookieBehavior` | 1 | block third party cookies
 `network.dns.disablePrefetch` | true | disable DNS prefetching
 `network.prefetch-next` | false | don't prefetch the next page
-`webgl.disabled` | true` | disable WebGL
+`webgl.disabled` | true | disable WebGL
 `privacy.firstparty.isolate` | true | prevents tracking across different domains
 `browser.send_pings` | false | prevent pages from tracking clicks
 `dom.battery.enabled` | false | prevent websites from knowing your battery status
