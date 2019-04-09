@@ -277,5 +277,5 @@ Lines to add
 In `about:config`
 
 setting | set to
---- | --- | ---
+--- | ---
 media.peerconnection.enabled | false
