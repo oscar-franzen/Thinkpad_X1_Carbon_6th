@@ -272,3 +272,10 @@ Lines to add
 127.0.0.1   m.facebook.com
 127.0.0.1   developers.facebook.com
 ```
+
+## Privacy improvements in firefox
+In `about:config`
+
+setting | set to
+--- | --- | ---
+media.peerconnection.enabled | false
