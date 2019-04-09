@@ -246,3 +246,29 @@ Security -> I/O Post Access -> Wireless WAN -> Disabled
 # I also disabled NFC (Near Field Communication for some devices), because I don't know what I would use it for
 Security -> I/O Post Access -> NFC Device -> Disabled
 ```
+
+## Block facebook, twitter, etc
+```
+sudo vim /etc/hosts
+```
+
+Lines to add
+```
+127.0.0.1   www.facebook.com
+127.0.0.1   facebook.com
+127.0.0.1   login.facebook.com
+127.0.0.1   www.login.facebook.com
+127.0.0.1   fbcdn.net
+127.0.0.1   www.fbcdn.net
+127.0.0.1   fbcdn.com
+127.0.0.1   www.fbcdn.com
+127.0.0.1   static.ak.fbcdn.net
+127.0.0.1   static.ak.connect.facebook.com
+127.0.0.1   connect.facebook.net
+127.0.0.1   www.connect.facebook.net
+127.0.0.1   www.twitter.com
+127.0.0.1   twitter.com
+127.0.0.1   apps.facebook.com
+127.0.0.1   m.facebook.com
+127.0.0.1   developers.facebook.com
+```
