@@ -285,3 +285,4 @@ privacy.resistFingerprinting | true | resists fingerprinting; __setting this to 
 network.cookie.cookieBehavior | 1 | block third party cookies
 network.dns.disablePrefetch | true | disable DNS prefetching
 network.prefetch-next | false | don't prefetch the next page
+webgl.disabled | true | disable WebGL
