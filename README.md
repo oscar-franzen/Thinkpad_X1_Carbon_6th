@@ -4,6 +4,9 @@ In this document I'm collecting some of the configuration tweaks I did to setup 
 
 - <p.oscar.franzen@gmail.com>
 
+## Why run Linux on the Thinkpad
+My goal, while not achieved yet, is to eventually replace all my usage of Apple software with free counterparts.
+
 ## The system
 ```bash
 $ sudo dmidecode -s system-version
