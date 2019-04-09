@@ -278,18 +278,19 @@ In `about:config`
 
 setting | set to | what it does
 --- | --- | ---
-media.peerconnection.enabled | false | disable Web Real-Time Communication
-geo.enabled | false | false  | disable geolocation tracking
-media.navigator.enabled | false | disable microphone and camera status tracking
-privacy.resistFingerprinting | true | resists fingerprinting; __setting this to true will break google captchas__
-network.cookie.cookieBehavior | 1 | block third party cookies
-network.dns.disablePrefetch | true | disable DNS prefetching
-network.prefetch-next | false | don't prefetch the next page
-webgl.disabled | true | disable WebGL
-privacy.firstparty.isolate | true | prevents tracking across different domains
-browser.send_pings | false | prevent pages from tracking clicks
-dom.battery.enabled | false | prevent websites from knowing your battery status
-dom.event.clipboardevents.enabled | false | prevent websites from knowing if you copy or paste
-network.http.referer.trimmingPolicy | 1 | Send the URL without its query string in the Referer header
-network.http.referer.XOriginPolicy | 1 | Send Referer to same eTLD sites
-dom.event.contextmenu.enabled | false | disable hijacking of the context menu; __setting this to false will break certain e-mail services__
+`media.peerconnection.enabled` | false | disable Web Real-Time Communication
+`geo.enabled` | false | false  | disable geolocation tracking
+`media.navigator.enabled` | false | disable microphone and camera status tracking
+`privacy.resistFingerprinting` | true | resists fingerprinting; __setting this to true will break google captchas__
+`network.cookie.cookieBehavior` | 1 | block third party cookies
+`network.dns.disablePrefetch` | true | disable DNS prefetching
+`network.prefetch-next` | false | don't prefetch the next page
+`webgl.disabled` | true` | disable WebGL
+`privacy.firstparty.isolate` | true | prevents tracking across different domains
+`browser.send_pings` | false | prevent pages from tracking clicks
+`dom.battery.enabled` | false | prevent websites from knowing your battery status
+`dom.event.clipboardevents.enabled` | false | prevent websites from knowing if you copy or paste
+`network.http.referer.trimmingPolicy` | 1 | Send the URL without its query string in the Referer header
+`network.http.referer.XOriginPolicy` | 1 | Send Referer to same eTLD sites
+`dom.event.contextmenu.enabled` | false | disable hijacking of the context menu; __setting this to false will break certain e-mail services__
+`dom.event.contextmenu.enabled` | false | disable hijacking of the context menu; __setting this to false will break certain e-mail services__
