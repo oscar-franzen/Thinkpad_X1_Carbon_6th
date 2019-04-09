@@ -286,3 +286,9 @@ network.cookie.cookieBehavior | 1 | block third party cookies
 network.dns.disablePrefetch | true | disable DNS prefetching
 network.prefetch-next | false | don't prefetch the next page
 webgl.disabled | true | disable WebGL
+privacy.firstparty.isolate | true | prevents tracking across different domains
+browser.send_pings | false | prevent pages from tracking clicks
+dom.battery.enabled | false | prevent websites from knowing your battery status
+dom.event.clipboardevents.enabled | false | prevent websites from knowing if you copy or paste
+network.http.referer.trimmingPolicy | 1 | Send the URL without its query string in the Referer header
+network.http.referer.XOriginPolicy | 1 | Send Referer to same eTLD sites
