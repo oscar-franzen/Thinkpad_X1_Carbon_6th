@@ -281,4 +281,7 @@ setting | set to | what it does
 media.peerconnection.enabled | false | disable Web Real-Time Communication
 geo.enabled | false | false  | disable geolocation tracking
 media.navigator.enabled | false | disable microphone and camera status tracking
-privacy.resistFingerprinting | true | __setting this to true will break google captchas__
+privacy.resistFingerprinting | true | resists fingerprinting; __setting this to true will break google captchas__
+network.cookie.cookieBehavior | 1 | block third party cookies
+network.dns.disablePrefetch | true | disable DNS prefetching
+network.prefetch-next | false | don't prefetch the next page
