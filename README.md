@@ -276,6 +276,8 @@ Lines to add
 ## Privacy improvements in firefox
 In `about:config`
 
-setting | set to
---- | ---
-media.peerconnection.enabled | false
+setting | set to | what it does
+--- | --- | ---
+media.peerconnection.enabled | false | disable Web Real-Time Communication
+geo.enabled | false | false  | disable geolocation tracking
+media.navigator.enabled | false | disable microphone and camera status tracking
