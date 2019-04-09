@@ -273,8 +273,8 @@ Lines to add
 127.0.0.1   developers.facebook.com
 ```
 
-## Privacy improvements in firefox
-In `about:config`
+## Privacy improvements in firefox `about:config`
+* More settings: https://gist.github.com/0XDE57/fbd302cef7693e62c769
 
 setting | set to | what it does
 --- | --- | ---
