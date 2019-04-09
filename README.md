@@ -292,3 +292,4 @@ dom.battery.enabled | false | prevent websites from knowing your battery status
 dom.event.clipboardevents.enabled | false | prevent websites from knowing if you copy or paste
 network.http.referer.trimmingPolicy | 1 | Send the URL without its query string in the Referer header
 network.http.referer.XOriginPolicy | 1 | Send Referer to same eTLD sites
+dom.event.contextmenu.enabled | false | disable hijacking of the context menu; __setting this to false will make Online Exchange email more annoying__
