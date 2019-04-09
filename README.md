@@ -172,6 +172,23 @@ chmod +x name.sh
 ## Timemachine-like backups
 Here is a good script for making backups like timemachine: https://github.com/laurent22/rsync-time-backup
 
+Identify the UUID of the external backup disk
+```
+sudo blkid
+```
+
+Put in crontab:
+
+```bash
+#!/bin/bash
+
+if [ -e /dev/disk/by-uuid/XYZ ]; then
+  /path/to/rsync_tmbackup.sh --no-auto-expire /home/foobar /mount/point/of/backup .exclude_backup_patterns
+else
+  echo "backup drive not found"
+fi
+```
+
 ## Mount an iPhone
 iPhones can easily be mounted. First install:
 
