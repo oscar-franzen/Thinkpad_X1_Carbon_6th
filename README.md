@@ -185,7 +185,7 @@ Put in crontab:
 ```bash
 #!/bin/bash
 
-if [ -e /dev/disk/by-uuid/XYZ ]; then
+if [ -e /dev/disk/by-uuid/UUID ]; then
   /path/to/rsync_tmbackup.sh --no-auto-expire /home/foobar /mount/point/of/backup .exclude_backup_patterns
 else
   echo "backup drive not found"
