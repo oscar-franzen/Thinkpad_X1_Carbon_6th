@@ -304,6 +304,8 @@ keyboard combination | what it does
 `ctrl+alt+f1` | go to console
 
 ## Uncomplicated Firewall
+Human-usable frontend for `iptables`.
+
 ```
 apt-get install ufw
 ufw default deny incoming
