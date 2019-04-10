@@ -296,3 +296,8 @@ setting | set to | what it does
 
 ## A simple calculator
 `mate-calc`
+
+## Good to remember keyboard commands
+setting | what it does
+--- | --- | ---
+`ctrl+alt+f1` | go to console
