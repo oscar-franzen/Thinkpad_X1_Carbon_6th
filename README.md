@@ -311,3 +311,11 @@ ufw default allow outgoing
 ufw enable
 ufw status verbose
 ```
+
+## gdm3 instead of LightDM
+LightDM is default in Xubuntu, but it caused me problems with blank screen when using external monitor.
+
+```
+sudo apt-get install gdm3 xscreensaver
+sudo apt-get remove lightdm
+```
