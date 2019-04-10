@@ -302,3 +302,11 @@ setting | set to | what it does
 keyboard combination | what it does
 --- | ---
 `ctrl+alt+f1` | go to console
+
+## Uncomplicated Firewall
+```
+apt-get install ufw
+ufw default deny incoming
+ufw default allow outgoing
+ufw enable
+```
