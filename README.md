@@ -298,6 +298,6 @@ setting | set to | what it does
 `mate-calc`
 
 ## Good to remember keyboard commands
-setting | what it does
+keyboard combination | what it does
 --- | ---
 `ctrl+alt+f1` | go to console
