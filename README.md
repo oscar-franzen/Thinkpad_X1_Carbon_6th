@@ -313,7 +313,7 @@ ufw status verbose
 ```
 
 ## gdm3 instead of LightDM
-LightDM is default display manager in Xubuntu, handling the login and locked screen, etc. However, it caused me problems with blank screen when using external monitor. It can be addressed with xrandr but a quicker solution is just to switch to gdm3.
+LightDM is default display manager in Xubuntu, handling the login and locked screens, etc. However, LightDM caused me problems with blank screen when using an external monitor. The problem can be addressed with xrandr but a quicker solution is just to switch to gdm3.
 
 ```
 sudo apt-get install gdm3 xscreensaver
