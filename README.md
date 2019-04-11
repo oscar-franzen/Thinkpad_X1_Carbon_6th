@@ -345,7 +345,7 @@ rfkill block bluetooth
 ```
 
 ## Spotify
-Can be added to as keyboard shortcuts through Xfce4 Settings.
+Pause play, next and previous song. Can be added to as keyboard shortcuts through Xfce4 Settings.
 
 ```
 dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
