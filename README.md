@@ -84,7 +84,7 @@ sudo update-initramfs -u
 ```
 
 ### Fix "pipe" problem on the Swedish Apple USB keyboard
-The pipe character is incorrectly mapped (mine was `alt+§`). Create a small helper script and make it executable `chmod +x helper.sh` and put it somewhere, and add it in Xfce4 go to settings, Session and Startup, Application Autostart.
+The pipe character is incorrectly mapped (mine was `alt+§`). Create a small helper script and make it executable `chmod +x helper.sh` and put it somewhere, and add it in Xfce4 (go to settings, Session and Startup, Application Autostart).
 ```bash
 #!/bin/bash
 
