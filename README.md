@@ -88,8 +88,10 @@ The pipe character is incorrectly mapped (mine was `alt+§`). Create a small hel
 ```bash
 #!/bin/bash
 
-setxkbmap -device `xinput -list | grep Apple | sed 's/.*id=\(.*\)\t.*/\1/'` -layout se
-setxkbmap -device `xinput -list | grep Apple | sed 's/.*id=\(.*\)\t.*/\1/'` -option apple:badmap
+if [[ `xinput -list | grep Apple` != "" ]]; then
+  setxkbmap -device `xinput -list | grep Apple | sed 's/.*id=\(.*\)\t.*/\1/'` -layout se
+  setxkbmap -device `xinput -list | grep Apple | sed 's/.*id=\(.*\)\t.*/\1/'` -option apple:badmap
+fi
 ```
 
 ## Annoying screen flickering
