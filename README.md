@@ -338,3 +338,8 @@ My system came with the blueman applet, which autostarts bluetooth everytime I r
 ```
 gsettings set org.blueman.plugins.powermanager auto-power-on false
 ```
+
+Bluetooth can be temporary killed with:
+```
+rfkill block bluetooth
+```
