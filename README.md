@@ -148,6 +148,7 @@ I prefer to be able to open a new terminal tab with `ctrl+t` and close a tab wit
 ```
 (gtk_accel_path "<Actions>/terminal-window/close-tab" "<Primary>w")
 (gtk_accel_path "<Actions>/terminal-window/new-tab" "<Primary>t")
+(gtk_accel_path "<Actions>/terminal-window/search" "<Primary>f")
 ```
 
 ## Screenshot selection
