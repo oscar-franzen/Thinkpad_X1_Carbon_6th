@@ -331,3 +331,10 @@ LightDM is default display manager in Xubuntu, handling the login and locked scr
 sudo apt-get install gdm3 xscreensaver
 sudo apt-get remove lightdm
 ```
+
+## Disable bluetooth from autostarting
+My system came with the blueman applet, which autostarts bluetooth everytime I resume from suspend, etc. Permanently disable this behavior:
+
+```
+gsettings set org.blueman.plugins.powermanager auto-power-on false
+```
