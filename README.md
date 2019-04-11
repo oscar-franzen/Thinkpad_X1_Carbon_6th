@@ -83,6 +83,15 @@ options hid_apple fnmode=2                   # Mode of top-row keys should be no
 sudo update-initramfs -u
 ```
 
+### Fix "pipe" problem on the Swedish Apple USB keyboard
+The pipe character is incorrectly mapped (mine was `alt+§`). Create a small helper script and make it executable `chmod +x helper.sh` and put it somewhere, and add it in Xfce4 go to settings, Session and Startup, Application Autostart.
+```bash
+#!/bin/bash
+
+setxkbmap -device `xinput -list | grep Apple | sed 's/.*id=\(.*\)\t.*/\1/'` -layout se
+setxkbmap -device `xinput -list | grep Apple | sed 's/.*id=\(.*\)\t.*/\1/'` -option apple:badmap
+```
+
 ## Annoying screen flickering
 To get rid of the annoying screen flickering, for example when browsing, the following worked for me:
 
