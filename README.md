@@ -150,7 +150,8 @@ case "$1" in
 esac
 ```
 
-## Changing shortcut keys for `xfce4-terminal`
+## `xfce4-terminal`
+### Changing shortcut keys for `xfce4-terminal`
 I prefer to be able to open a new terminal tab with `ctrl+t` and close a tab with `ctrl+w`. Fortunately this is easy to fix:
 1. Fire ```vim /home/rand/.config/xfce4/terminal/accels.scm```
 2. Then add
@@ -159,6 +160,8 @@ I prefer to be able to open a new terminal tab with `ctrl+t` and close a tab wit
 (gtk_accel_path "<Actions>/terminal-window/new-tab" "<Primary>t")
 (gtk_accel_path "<Actions>/terminal-window/search" "<Primary>f")
 ```
+### Prevent `ctrl+c` hickups
+Delete all default keyboard shortcuts in Xfce4 settings.
 
 ## Screenshot selection
 I like to be able to press a keyboard combination and then being able to select an area for screenshots.
