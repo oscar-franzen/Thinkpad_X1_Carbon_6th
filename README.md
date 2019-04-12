@@ -370,6 +370,6 @@ any flowchart app | [Graphviz](https://www.graphviz.org/)
 Sublime Text | [geany](https://www.geany.org/), [vim](https://www.vim.org/)
 
 ## Other things useful
-installation command | what it is for
---- | ---
-`sudo apt-get install librsvg2-bin` | `rsvg-convert` - svg to pdf conversion
+installation command | program name | what it is for
+--- | --- | ---
+`sudo apt-get install librsvg2-bin` | `rsvg-convert` | svg to pdf conversion
