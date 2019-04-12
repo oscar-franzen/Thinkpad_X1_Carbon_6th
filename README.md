@@ -368,3 +368,8 @@ Endnotes | [Zotero](https://www.zotero.org/)
 Acrobat Reader | [Okular](https://okular.kde.org/)
 any flowchart app | [Graphviz](https://www.graphviz.org/)
 Sublime Text | [geany](https://www.geany.org/), [vim](https://www.vim.org/)
+
+## Other things useful
+```bash
+sudo apt-get install librsvg2-bin | rsvg-convert - svg to pdf conversion
+```
