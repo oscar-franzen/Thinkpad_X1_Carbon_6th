@@ -360,7 +360,8 @@ dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPl
 ```
 
 ## Replacing proprietary software
-Software to replace | Free alternative
+Software to replace | Open source/free alternative
 --- | ---
 Microsoft Word | [LyX](https://www.lyx.org/)
 Endnotes | [Zotero](https://www.zotero.org/)
+Acrobat Reader | [Okular](https://okular.kde.org/)
