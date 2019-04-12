@@ -365,3 +365,4 @@ Software to replace | Open source/free alternative
 Microsoft Word | [LyX](https://www.lyx.org/)
 Endnotes | [Zotero](https://www.zotero.org/)
 Acrobat Reader | [Okular](https://okular.kde.org/)
+any flowchart app | [https://www.graphviz.org/](Graphviz)
