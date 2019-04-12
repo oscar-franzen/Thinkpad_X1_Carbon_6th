@@ -363,6 +363,7 @@ dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPl
 Software to replace | Open source/free alternative
 --- | ---
 Microsoft Word | [LyX](https://www.lyx.org/)
+Microsoft Powerpoint/Excel | [Libreoffice](https://www.libreoffice.org/)
 Endnotes | [Zotero](https://www.zotero.org/)
 Acrobat Reader | [Okular](https://okular.kde.org/)
 any flowchart app | [Graphviz](https://www.graphviz.org/)
