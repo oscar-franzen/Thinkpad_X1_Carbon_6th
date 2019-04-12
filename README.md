@@ -363,4 +363,4 @@ dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPl
 Software to replace | Free alternative
 --- | ---
 Microsoft Word | [LyX](https://www.lyx.org/)
-Endnotes | Zotero
+Endnotes | [Zotero](https://www.zotero.org/)
