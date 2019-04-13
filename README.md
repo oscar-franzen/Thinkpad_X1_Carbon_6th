@@ -395,7 +395,7 @@ watch 'grep "cpu MHz" /proc/cpuinfo'
 sudo apt-get install tmux
 ```
 
-### `~/.tmux.conf`
+`~/.tmux.conf`
 ```
 bind '"' split-window -c "#{pane_current_path}"
 bind % split-window -h -c "#{pane_current_path}"
