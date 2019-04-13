@@ -334,7 +334,7 @@ ufw enable
 ufw status verbose
 ```
 
-## gdm3 instead of LightDM
+## `gdm3` instead of LightDM
 LightDM is default display manager in Xubuntu, handling the login and locked screens, etc. However, LightDM caused me problems with blank screen when using an external monitor. The problem can be addressed with xrandr but a quicker solution is just to switch to gdm3.
 
 ```
@@ -380,8 +380,12 @@ installation command | program name | what it is for
 `sudo apt-get install librsvg2-bin` | `rsvg-convert` | svg to pdf conversion
 
 ## Monitor CPU speed
+CPU speed:
 ```bash
 lscpu | grep "^CPU"
+```
 
+Checking for example toggling when using the battery:
+```
 watch 'grep "cpu MHz" /proc/cpuinfo'
 ```
