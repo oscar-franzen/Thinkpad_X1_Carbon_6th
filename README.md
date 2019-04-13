@@ -378,3 +378,10 @@ Sublime Text | [geany](https://www.geany.org/), [vim](https://www.vim.org/)
 installation command | program name | what it is for
 --- | --- | ---
 `sudo apt-get install librsvg2-bin` | `rsvg-convert` | svg to pdf conversion
+
+## Monitor CPU speed
+```bash
+lscpu | grep "^CPU"
+
+watch 'grep "cpu MHz" /proc/cpuinfo'
+```
