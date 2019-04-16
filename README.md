@@ -408,4 +408,4 @@ set -g status-bg blue
 ## Cheat sheet
 Command | ?
 --- | ---
-sudo apt-get purge <package> | Remove package and conf files.
+`sudo apt-get purge <package>` | Remove package and conf files.
