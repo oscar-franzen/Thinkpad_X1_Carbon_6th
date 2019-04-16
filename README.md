@@ -139,17 +139,24 @@ chmod +x script
 
 3. Create a new file:
 ```bash
-sudo vim /usr/lib/pm-utils/sleep.d/99ZZ_disable_capslock
+~~sudo vim /usr/lib/pm-utils/sleep.d/99ZZ_disable_capslock~~
+```
+
+```bash
+sudo vim /lib/systemd/system-sleep/disable_capslock
 ```
 
 And add the following lines:
 ```bash
-#!/bin/sh
+#!/bin/bash
 
-case "$1" in
-    resume)
-        /path/to/helper/script
-esac
+sleep 1s
+/path/to/helper/script
+```
+
+Make it executable
+```
+sudo chmod +x /lib/systemd/system-sleep/disable_capslock
 ```
 
 ## `xfce4-terminal`
