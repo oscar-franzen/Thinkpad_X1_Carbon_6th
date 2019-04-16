@@ -404,3 +404,8 @@ bind c new-window -c "#{pane_current_path}"
 set -g status-bg blue
 
 ```
+
+## Cheat sheet
+Command | ?
+--- | ---
+sudo apt-get purge <package> | Remove package and conf files.
