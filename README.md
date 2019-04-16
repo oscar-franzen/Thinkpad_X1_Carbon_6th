@@ -138,6 +138,7 @@ chmod +x script
 ```
 
 3. Create a new file:
+
 ~~sudo vim /usr/lib/pm-utils/sleep.d/99ZZ_disable_capslock~~
 
 ```bash
