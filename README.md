@@ -55,6 +55,19 @@ This one is annoying because the system loads into X11 and without a mouse I fou
 3. `sudo update-grub`
 4. Reboot
 
+## Troubleshoot keyboard layout
+```
+$ setxkbmap -print
+xkb_keymap {
+	xkb_keycodes  { include "evdev+aliases(qwerty)"	};
+	xkb_types     { include "complete"	};
+	xkb_compat    { include "complete"	};
+	xkb_symbols   { include "pc+se+inet(evdev)+ctrl(nocaps)"	};
+	xkb_geometry  { include "pc(pc105)"	};
+};
+
+```
+
 ## External Mac keyboard
 I still like and use a Mac keyboard with the TX1C6. Some tweaking is needed for a good experience.
 
