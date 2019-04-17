@@ -398,6 +398,7 @@ Sublime Text | [geany](https://www.geany.org/), [vim](https://www.vim.org/)
 installation command | program name | what it is for
 --- | --- | ---
 `sudo apt-get install librsvg2-bin` | `rsvg-convert` | svg to pdf conversion
+`sudo apt-get install xkeycaps` | `xkeycaps` | check keyboard layout
 
 ## Monitor CPU speed
 CPU speed:
