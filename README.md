@@ -443,3 +443,30 @@ set -g status-bg blue
 Command | ?
 --- | ---
 `sudo apt-get purge <package>` | Remove package and conf files.
+
+## zsh
+I prefer zsh over bash.
+
+```
+sudo apt-get install zsh
+
+chsh --shell /bin/zsh <username>
+
+# logout and login
+```
+
+Install [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh) to spice it up a bit.
+
+```bash
+sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+```
+
+```bash
+# partial ~/.zshrc
+PROMPT="
+%{$fg[blue]%}%n${fg_white}[${fg_blue}%~${fg_white}]> "
+autoload -U compinit
+setopt autocd
+setopt auto_resume
+DISABLE_AUTO_UPDATE="true"
+```
