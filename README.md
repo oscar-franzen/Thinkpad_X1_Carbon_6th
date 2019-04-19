@@ -289,6 +289,23 @@ Security -> I/O Post Access -> Wireless WAN -> Disabled
 Security -> I/O Post Access -> NFC Device -> Disabled
 ```
 
+### Enable Framebuffer compression
+According to [here](https://www.thinkwiki.org/wiki/X1_Linux_Tweaks) and [here](https://wiki.archlinux.org/index.php/Intel_graphics#Framebuffer_compression_(enable_fbc)), this is supposed to improve battery life. Add `i915.enable_fbc=1` to `GRUB_CMDLINE_LINUX_DEFAULT` in `/etc/default/grub`
+
+```
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash psmouse.synaptics_intertouch=1 i915.enable_fbc=1"
+```
+
+```
+sudo update-grub
+```
+
+However, `dmesg` not shows this message and I don't know if this is good or not.
+
+```
+Setting dangerous option enable_fbc - tainting kernel
+```
+
 ## Block facebook, twitter, etc
 ```
 sudo vim /etc/hosts
