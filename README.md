@@ -471,3 +471,14 @@ setopt autocd
 setopt auto_resume
 DISABLE_AUTO_UPDATE="true"
 ```
+
+## Controlling brightness from command line
+```
+sudo apt-get install xbacklight
+
+# increase 5%
+xbacklight -inc 5
+
+# decrease 5%
+xbacklight -dec 5
+```
