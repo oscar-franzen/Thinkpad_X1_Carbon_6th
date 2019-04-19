@@ -290,12 +290,12 @@ Security -> I/O Post Access -> NFC Device -> Disabled
 ```
 
 ### Enable Framebuffer compression
-According to [here](https://www.thinkwiki.org/wiki/X1_Linux_Tweaks) and [here](https://wiki.archlinux.org/index.php/Intel_graphics#Framebuffer_compression_(enable_fbc)), this is supposed to improve battery life. Add `i915.enable_fbc=1` to `GRUB_CMDLINE_LINUX_DEFAULT` in `/etc/default/grub`
+According to [here](https://www.thinkwiki.org/wiki/X1_Linux_Tweaks) and [here](https://wiki.archlinux.org/index.php/Intel_graphics#Framebuffer_compression_(enable_fbc)), this is supposed to improve battery life. Add `i915.enable_fbc=1` to `GRUB_CMDLINE_LINUX_DEFAULT` in `/etc/default/grub`:
 
 ```
 GRUB_CMDLINE_LINUX_DEFAULT="quiet splash psmouse.synaptics_intertouch=1 i915.enable_fbc=1"
 ```
-
+Update grub:
 ```
 sudo update-grub
 ```
