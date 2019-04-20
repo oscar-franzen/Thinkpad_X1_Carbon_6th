@@ -490,14 +490,16 @@ DISABLE_AUTO_UPDATE="true"
 ```
 
 ## Controlling brightness from command line
+Yes, there are keys on the keyboard, but the increments are big. What if I just want to change 1%?
+
 ```
 sudo apt-get install xbacklight
 
-# increase 5%
-xbacklight -inc 5
+# increase 1%
+xbacklight -inc 1
 
-# decrease 5%
-xbacklight -dec 5
+# decrease 1%
+xbacklight -dec 1
 ```
 
 ## Disable trackpad
