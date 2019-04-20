@@ -352,6 +352,7 @@ setting | set to | what it does
 `network.http.referer.trimmingPolicy` | 1 | Send the URL without its query string in the Referer header
 `network.http.referer.XOriginPolicy` | 1 | Send Referer to same eTLD sites
 `dom.event.contextmenu.enabled` | false | disable hijacking of the context menu; __setting this to false will break certain e-mail services__
+`media.mediasource.webm.enabled` | false | relates to disabling autoplay
 
 ## A simple calculator
 `mate-calc`
