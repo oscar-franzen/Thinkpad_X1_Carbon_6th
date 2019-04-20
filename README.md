@@ -499,3 +499,10 @@ xbacklight -inc 5
 # decrease 5%
 xbacklight -dec 5
 ```
+
+## Disable trackpad
+I sometimes want to disable the trackpad and only use the trackpoint.
+
+```bash
+xinput set-prop `xinput | grep Synaptics | sed 's/.*id=\(.*\)\t.*/\1/'` "Device Enabled" 0
+```
