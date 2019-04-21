@@ -415,7 +415,7 @@ amixer set Master "10%+"
 amixer set Master "10%-"
 ```
 
-## Replacing proprietary software
+## Replacing proprietary and non-free software
 Software to replace | Open source/free alternative
 --- | ---
 Microsoft Word | [LyX](https://www.lyx.org/)
