@@ -509,3 +509,13 @@ I sometimes want to disable the trackpad and only use the trackpoint.
 ```bash
 xinput set-prop `xinput | grep Synaptics | sed 's/.*id=\(.*\)\t.*/\1/'` "Device Enabled" 0
 ```
+
+## Modify mouse pointer image
+I wanted to change the color of the xterm mouse cursor to make it more visible. Assuming the default mouse theme in `Xfce4` was not changed (DMZ White), the cursor image is in the file `/usr/share/icons/DMZ-White/cursors`. The file is an X11 cursor file:
+
+```bash
+$ file xterm
+xterm: X11 cursor
+```
+
+and it can be opened in GIMP. The file consists of multiple layers. I modified each layer then exported it as an "X11 Mouse Cursor" file. Restart `Xfce4`.
