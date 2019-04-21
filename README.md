@@ -518,4 +518,4 @@ $ file xterm
 xterm: X11 cursor
 ```
 
-and it can be opened in GIMP. The file consists of multiple layers. I modified each layer then exported it as an "X11 Mouse Cursor" file. Restart `Xfce4`.
+and it can be opened in GIMP. The file consists of multiple layers. I modified each layer then exported it as an "X11 Mouse Cursor" file. Restart `Xfce4`. More details [here](http://shallowsky.com/linux/x-cursor-themes.html).
