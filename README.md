@@ -521,3 +521,6 @@ xterm: X11 cursor
 ```
 
 and it can be opened in GIMP. The file consists of multiple layers. I modified each layer then exported it as an "X11 Mouse Cursor" file. Restart `Xfce4`. More details [here](http://shallowsky.com/linux/x-cursor-themes.html).
+
+## Disable blinking for broken symlinks
+I have symlinks to external drives, and I don't want them to be blinking when drives are not mounted. `$LS_COLORS` needs to be changed (I load mine from `~/.zshrc`). Edit the environmental variable `$LS_COLORS` and change `or=` (symbolic link pointing to a non-existent file, orphan) and `mi=` (non-existent file pointed to by a symbolic link) by removing the value `05;`. More details [here](http://linux-sxs.org/housekeeping/lscolors.html).
