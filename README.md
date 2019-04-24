@@ -525,7 +525,9 @@ and it can be opened in GIMP. The file consists of multiple layers. I modified e
 ## Disable blinking for broken symlinks
 I have symlinks to external drives, and I don't want them to be blinking when drives are not mounted. `$LS_COLORS` needs to be changed (I load mine from `~/.zshrc`). Edit the environmental variable `$LS_COLORS` and change `or=` (symbolic link pointing to a non-existent file, orphan) and `mi=` (non-existent file pointed to by a symbolic link) by removing the value `05;`. More details [here](http://linux-sxs.org/housekeeping/lscolors.html).
 
-## Add syntax highlighting
+## Add syntax highlighting to `less`
+Very useful to see syntax highlighted code when browsing with `less`.
+
 ```bash
 sudo apt-get install source-highlight
 ```
