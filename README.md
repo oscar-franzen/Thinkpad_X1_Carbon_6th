@@ -524,3 +524,25 @@ and it can be opened in GIMP. The file consists of multiple layers. I modified e
 
 ## Disable blinking for broken symlinks
 I have symlinks to external drives, and I don't want them to be blinking when drives are not mounted. `$LS_COLORS` needs to be changed (I load mine from `~/.zshrc`). Edit the environmental variable `$LS_COLORS` and change `or=` (symbolic link pointing to a non-existent file, orphan) and `mi=` (non-existent file pointed to by a symbolic link) by removing the value `05;`. More details [here](http://linux-sxs.org/housekeeping/lscolors.html).
+
+## Add syntax highlighting
+```bash
+sudo apt-get install source-highlight
+```
+
+Add to `~/.zshrc`:
+
+```
+export LESSOPEN="| /usr/share/source-highlight/src-hilite-lesspipe.sh %s"
+export LESS=' -R '
+
+# The following adds syntax highlighting to man pages
+# Ref: https://goo.gl/ZSbwZI
+export LESS_TERMCAP_mb=$'\e[01;31m'       # begin blinking
+export LESS_TERMCAP_md=$'\e[01;38;5;74m'  # begin bold
+export LESS_TERMCAP_me=$'\e[0m'           # end mode
+export LESS_TERMCAP_se=$'\e[0m'           # end standout-mode
+export LESS_TERMCAP_so=$'\E[37;44m'       # begin standout-mode - info box
+export LESS_TERMCAP_ue=$'\e[0m'           # end underline
+export LESS_TERMCAP_us=$'\e[04;38;5;146m' # begin underline
+```
