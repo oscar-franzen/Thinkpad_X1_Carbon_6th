@@ -583,4 +583,4 @@ A reminder of useful shortcuts. More [here](http://www.sromero.org/wiki/linux/ap
 keyboard | what it does
 --- | ---
 `daw` | deletes the word currently under the cursor (dots are not included)
-`dt<char>` | Delete from cursor to <char>.
+`dt<char>` | Delete from cursor to `<char>`.
