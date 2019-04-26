@@ -569,6 +569,7 @@ hi Identifier cterm=none
 set numberwidth=5
 set columns=85
 set nu
+set linebreak
 
 set number
 
