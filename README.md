@@ -550,7 +550,7 @@ export LESS_TERMCAP_us=$'\e[04;38;5;146m' # begin underline
 ```
 
 # vim (Vi IMproved)
-I don't use `vim` for all editing, but it's a helpful friend.
+`vim` is a helpful friend.
 
 ## ~/.vimrc
 ```
@@ -578,8 +578,9 @@ ca W w
 ```
 
 ## keyboard
-A reminder of useful shortcuts.
+A reminder of useful shortcuts. More [here](http://www.sromero.org/wiki/linux/aplicaciones/vim_shortcuts).
 
 keyboard | what it does
 --- | ---
-`daw` | deletes the selected word
+`daw` | deletes the word currently under the cursor (dots are not included)
+`dt<char>` | Delete from cursor to <char>.
