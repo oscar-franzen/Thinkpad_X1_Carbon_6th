@@ -549,10 +549,10 @@ export LESS_TERMCAP_ue=$'\e[0m'           # end underline
 export LESS_TERMCAP_us=$'\e[04;38;5;146m' # begin underline
 ```
 
-# `vim` (Vi IMproved)
+# vim (Vi IMproved)
 I don't use `vim` for all editing, but it's a helpful friend.
 
-## `~/.vimrc`
+## ~/.vimrc
 ```
 set smartcase
 
