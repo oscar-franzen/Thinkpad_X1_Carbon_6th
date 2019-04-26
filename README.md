@@ -174,7 +174,7 @@ Make it executable
 sudo chmod +x /lib/systemd/system-sleep/disable_capslock
 ```
 
-## `xfce4-terminal`
+## xfce4-terminal
 ### Changing shortcut keys for `xfce4-terminal`
 I prefer to be able to open a new terminal tab with `ctrl+t` and close a tab with `ctrl+w`. Fortunately this is easy to fix:
 1. Fire ```vim /home/rand/.config/xfce4/terminal/accels.scm```
