@@ -548,3 +548,38 @@ export LESS_TERMCAP_so=$'\E[37;44m'       # begin standout-mode - info box
 export LESS_TERMCAP_ue=$'\e[0m'           # end underline
 export LESS_TERMCAP_us=$'\e[04;38;5;146m' # begin underline
 ```
+
+# `vim` (Vi IMproved)
+I don't use `vim` for all editing, but it's a helpful friend.
+
+## `~/.vimrc`
+```
+set smartcase
+
+set nopaste
+
+highlight Comment ctermbg=Grey ctermfg=White
+highlight Constant ctermbg=Yellow
+
+syntax enable
+hi Constant cterm=none
+hi Special cterm=none
+hi Identifier cterm=none
+
+set numberwidth=5
+set columns=85
+set nu
+
+set number
+
+syntax on
+
+ca W w
+```
+
+## keyboard
+A reminder of useful shortcuts.
+
+keyboard | what it does
+--- | ---
+`daw` | deletes the selected word
