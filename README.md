@@ -11,6 +11,9 @@ My goal, while not achieved yet, is to eventually replace all my usage of Apple 
 ```bash
 $ sudo dmidecode -s system-version
 ThinkPad X1 Carbon 6th
+
+$ uname -a | cut -d ' ' -f 3
+4.18.0-17-generic
 ```
 
 ### Non-fixable problems
