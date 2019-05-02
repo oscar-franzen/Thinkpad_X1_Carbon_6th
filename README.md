@@ -482,14 +482,17 @@ Install [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh) to spice it up a 
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 ```
 
+### partial ~/.zshrc
 ```bash
-# partial ~/.zshrc
+# must be _before_ source oh-my-zsh
+DISABLE_AUTO_UPDATE="true"
+source $ZSH/oh-my-zsh.sh
+
 PROMPT="
 %{$fg[blue]%}%n${fg_white}[${fg_blue}%~${fg_white}]> "
 autoload -U compinit
 setopt autocd
 setopt auto_resume
-DISABLE_AUTO_UPDATE="true"
 ```
 
 ## Controlling brightness from command line
