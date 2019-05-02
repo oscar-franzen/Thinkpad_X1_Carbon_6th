@@ -527,7 +527,7 @@ unalias l
 ## Controlling brightness from command line
 Yes, there are keys on the keyboard, but the increments are big. What if I just want to change 1%?
 
-```
+```bash
 sudo apt-get install xbacklight
 
 # increase 1%
