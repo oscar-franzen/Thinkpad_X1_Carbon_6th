@@ -433,6 +433,7 @@ installation command | program name | what it is for
 `sudo apt install librsvg2-bin` | `rsvg-convert` | svg to pdf conversion
 `sudo apt install xkeycaps` | `xkeycaps` | check keyboard layout
 `sudo apt install r-base` | `R` | [R](https://www.r-project.org)
+`sudo apt install feh` | `feh` | clutterless image viewer
 
 ## Monitor CPU speed
 CPU speed:
@@ -493,6 +494,34 @@ PROMPT="
 autoload -U compinit
 setopt autocd
 setopt auto_resume
+
+# useful aliases
+alias feh='feh --scale-down'
+alias t='top -u <username>'
+
+# what is my public IP?
+alias pubip='wget -qO- https://ipecho.net/plain ; echo'
+
+# nap time
+alias sus="systemctl suspend"
+alias ls="ls -N --color"
+
+# for tmux
+alias tml='tmux list-sessions'
+alias tma='tmux attach-session'
+
+alias cp="cp -vi"
+alias mv="mv -vi"
+
+alias ll='ls -N -slht -G --time-style="+%d %b %Y %H:%M"'
+alias lll='ls -N -slhtG --color --time-style="+%d %b %Y %H:%M" | less -R'
+
+alias grep="grep --color"
+
+alias cal="ncal -bM"
+
+# remove 'l' as an alias
+unalias l
 ```
 
 ## Controlling brightness from command line
