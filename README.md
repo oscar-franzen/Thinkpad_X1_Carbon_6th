@@ -185,7 +185,7 @@ I prefer to be able to open a new terminal tab with `ctrl+t` and close a tab wit
 ```
 (gtk_accel_path "<Actions>/terminal-window/close-tab" "<Primary>w")
 (gtk_accel_path "<Actions>/terminal-window/new-tab" "<Primary>t")
-(gtk_accel_path "<Actions>/terminal-window/search" "<Primary>f")
+(gtk_accel_path "<Actions>/terminal-window/search" "<Shift><Alt>f")
 ```
 ### Prevent `ctrl+c` hickups (I prefer to have ctrl+c to cancel a command, not copy text)
 - Delete all default keyboard shortcuts in Xfce4 settings.
