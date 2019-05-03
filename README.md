@@ -620,3 +620,14 @@ keyboard | what it does
 --- | ---
 `daw` | deletes the word currently under the cursor (dots are not included)
 `dt<char>` | Delete from cursor to `<char>`.
+
+## Password-less ssh login
+```bash
+# generate keys (press enter two times when it asks for password)
+ssh-keygen -t rsa
+```
+Then copy the public key (file ending with .pub) to `~/.ssh/authorized_keys` on the remote server.
+
+Login through
+
+`ssh -i ~/.ssh/private.key remote@ip`
