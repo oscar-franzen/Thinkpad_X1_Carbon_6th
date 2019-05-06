@@ -633,11 +633,10 @@ Login through
 `ssh -i ~/.ssh/private.key remote@ip`
 
 ## Random wake-ups from sleep
-I'm trying to figure out how to stop this behavior.
 ```bash
 $ cat /sys/power/mem_sleep
 s2idle [deep]
 ```
-
+This seems to stop unwanted wake-ups.
 ### acpi.ec_no_wakeup
 Add `acpi.ec_no_wakeup=1` to `/etc/default/grub` then `sudo update-grub`.
