@@ -548,6 +548,12 @@ I sometimes want to disable the trackpad and only use the trackpoint.
 xinput set-prop `xinput | grep Synaptics | sed 's/.*id=\(.*\)\t.*/\1/'` "Device Enabled" 0
 ```
 
+## Trackpad stops working after waking up from sleep
+```bash
+sudo rmmod psmouse
+sudo modprobe psmouse
+```
+
 ## Modify mouse pointer image
 I wanted to change the color of the xterm mouse cursor to make it more visible. Assuming the default mouse theme in `Xfce4` was not changed (DMZ White), the cursor image is in the file `/usr/share/icons/DMZ-White/cursors`. The file is an X11 cursor file:
 
@@ -632,12 +638,3 @@ Then copy the public key (file ending with .pub) to `~/.ssh/authorized_keys` on 
 Login through
 
 `ssh -i ~/.ssh/private.key remote@ip`
-
-## ~~Random wake-ups from sleep~~
-```bash
-~~$ cat /sys/power/mem_sleep~~
-~~s2idle [deep]~~
-```
-~~This seems to stop unwanted wake-ups.~~
-### ~~acpi.ec_no_wakeup~~
-~~Add `acpi.ec_no_wakeup=1` to `/etc/default/grub` then `sudo update-grub`.~~
