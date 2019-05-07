@@ -357,6 +357,7 @@ setting | set to | what it does
 `dom.event.contextmenu.enabled` | false | disable hijacking of the context menu; __setting this to false will break certain e-mail services__
 `media.mediasource.webm.enabled` | false | relates to disabling autoplay
 `dom.webnotifications.enabled ` | false | disable notifications from websites
+`privacy.trackingprotection.cryptomining.enabled` | true | prevent crypto currency mining
 
 ## A simple calculator
 `mate-calc`
