@@ -225,7 +225,7 @@ Identify the UUID of the external backup disk
 sudo blkid
 ```
 
-Put in crontab:
+Create a small helper script and put it somewhere (`/home/foobar` is the directory to be backed up and `/mount/point/of/backup` is the mounted external drive; `.exclude_backup_patterns` contains optional directories to be excluded):
 
 ```bash
 #!/bin/bash
@@ -235,6 +235,18 @@ if [ -e /dev/disk/by-uuid/UUID ]; then
 else
   echo "backup drive not found"
 fi
+```
+
+A good idea is to use crontab to launch the backup every day at a certain time:
+
+```bash
+crontab -e
+```
+
+The following line will run the backup at 19:00 every day (don't forget to add two empty lines to the end of the crontab file):
+
+```
+0 19 * * * /path/to/helper/script
 ```
 
 ## Mount an iPhone
