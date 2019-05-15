@@ -1,11 +1,11 @@
 # Linux on the ThinkPad X1 Carbon 6th
 ## About this document
-In this document I'm collecting some of the configuration tweaks I did to setup Linux on my ThinkPad X1 Carbon 6th - primarily so that I can repeat them quickly in case I need to reinstall; I'm including some general Linux configuration that is not specific for the Thinkpad. The good news is that most things work out of the box after installing [Xubuntu](https://xubuntu.org/) bionic, but there are some exceptions. (In fact more things seem to work out of the box with Xubuntu compared with regular Ubuntu on the TX1C6.) Another excellent document which also works well for Xubuntu on the TX1C6 is the [Arch Linux guide](https://wiki.archlinux.org/index.php/Lenovo_ThinkPad_X1_Carbon_(Gen_6)).
+In this document I'm collecting some of the configuration tweaks I did to setup Linux on my ThinkPad X1 Carbon 6th - primarily so that I can repeat them quickly in case I need to reinstall; I'm including some general Linux configuration that is not specific for the Thinkpad. The good news is that most things work out of the box after installing [Xubuntu](https://xubuntu.org/) bionic, but there are some exceptions. (In fact more things seem to work out of the box with Xubuntu compared with regular Ubuntu on the TX1C6.) Another excellent document which also works well for Xubuntu on the TX1C6 is the [Arch Linux guide](https://wiki.archlinux.org/index.php/Lenovo_ThinkPad_X1_Carbon_(Gen_6)). At the moment this document has evolved to a general set of notes for quick reference.
 
 - Oscar <p.oscar.franzen@gmail.com>
 
 ## Why run Linux on the ThinkPad
-My goal, while not achieved yet, is to eventually replace all my usage of Apple software with free counterparts.
+I was a Linux user for a number of years, then 2011 turned to Mac, and finally in 2018 went back to Linux.
 
 ## The system
 ```bash
@@ -597,6 +597,11 @@ setting | set to | what it does
 keyboard combination | what it does
 --- | ---
 `ctrl+alt+f1` | go to console
+`ctrl+a` | jump to beginning of line
+`ctrl+e` | jump to end of line
+`ctrl+k` | delete everything in front of the cursor
+`alt+f` | jump one word forward
+`alt+b` | jump one word backward
 
 ## Uncomplicated Firewall
 Human-usable frontend for `iptables`.
