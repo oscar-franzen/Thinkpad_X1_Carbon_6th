@@ -4,8 +4,8 @@ In this document I'm collecting some of the configuration tweaks I did to setup 
 
 - Oscar <p.oscar.franzen@gmail.com>
 
-## Why run Linux on the ThinkPad
-I was a Linux user for a number of years, then 2011 turned to Mac, and finally in 2018 went back to Linux.
+## Why I run Linux on the ThinkPad
+I was a Linux user for a number of years, then 2011 turned to Mac, and finally in 2018 went back to Linux. Linux offers more flexibility and freedom than being locked into MacOS.
 
 ## The system
 ```bash
