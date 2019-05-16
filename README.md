@@ -674,6 +674,7 @@ installation command | program name | what it is for
 `sudo apt install r-base` | `R` | [R](https://www.r-project.org)
 `sudo apt install feh` | `feh` | clutterless image viewer
 `sudo apt install iptraf` | `iptraf-ng` | monitoring network traffic
+`sudo apt install gpick` | `gpick` | a color picker
 
 ## Monitor CPU speed
 CPU speed:
