@@ -688,8 +688,17 @@ watch 'grep "cpu MHz" /proc/cpuinfo'
 ```
 
 ## tmux
+Get the source of the most recent version from https://github.com/tmux/tmux/wiki
+
 ```
-sudo apt-get install tmux
+# needed to copile the above
+sudo apt-get install libevent-dev
+```
+
+```
+./configure
+make
+make install
 ```
 
 ```
