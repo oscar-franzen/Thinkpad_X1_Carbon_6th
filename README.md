@@ -763,7 +763,7 @@ alias tma='tmux attach-session'
 alias cp="cp -vi"
 alias mv="mv -vi"
 
-alias ll='ls -N -slht -G --time-style="+%d %b %Y %H:%M"'
+alias ll='ls -H -N -slht -G --time-style="+%d %b %Y %H:%M"'
 alias lll='ls -N -slhtG --color --time-style="+%d %b %Y %H:%M" | less -R'
 
 alias grep="grep --color"
