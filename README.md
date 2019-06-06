@@ -884,3 +884,10 @@ Then copy the public key (file ending with .pub) to `~/.ssh/authorized_keys` on 
 Login through
 
 `ssh -i ~/.ssh/private.key remote@ip`
+
+## Set time zone
+```bash
+timedatectl list-timezones
+
+sudo timedatectl set-timezone Asia/Manila
+```
