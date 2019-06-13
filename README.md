@@ -891,3 +891,9 @@ timedatectl list-timezones
 
 sudo timedatectl set-timezone Asia/Manila
 ```
+
+## GoPro
+```
+sudo apt-get install exfat-utils exfat-fuse
+cd /run/user/1000/gvfs/
+```
