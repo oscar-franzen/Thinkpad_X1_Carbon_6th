@@ -896,4 +896,7 @@ sudo timedatectl set-timezone Asia/Manila
 ```
 sudo apt-get install exfat-utils exfat-fuse
 cd /run/user/1000/gvfs/
+
+# 2000000 bytes/second
+ffmpeg -i input.mp4 -b 2000000 output.mp4
 ```
