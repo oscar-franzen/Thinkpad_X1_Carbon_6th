@@ -746,8 +746,14 @@ setopt autocd
 setopt auto_resume
 
 # useful aliases
+# --------------
+# image viewer
 alias feh='feh --scale-down'
+
 alias t='top -u <username>'
+
+# gives free disk space
+alias led="df -h | grep /dev/nvme0n1p1 | awk '{print \$4\" free disk space\"}'"
 
 # what is my public IP?
 alias pubip='wget -qO- https://ipecho.net/plain ; echo'
