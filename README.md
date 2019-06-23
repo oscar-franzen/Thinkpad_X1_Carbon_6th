@@ -906,3 +906,28 @@ cd /run/user/1000/gvfs/
 # 2000000 bytes/second
 ffmpeg -i input.mp4 -b 2000000 output.mp4
 ```
+
+## Postfix: ignore certain domains
+How to ignore, for example, all incoming emails from the domain @grab.com
+```bash
+sudo vim /etc/postfix/header_checks
+```
+
+Add the following line:
+```
+/^From: .*@grab.com/       REJECT
+```
+
+```bash
+sudo vim /etc/postfix/main.cf
+```
+
+Add the following line:
+```
+header_checks = regexp:/etc/postfix/header_checks
+```
+
+Restart postfix
+```bash
+sudo service postfix restart
+```
