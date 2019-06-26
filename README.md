@@ -622,6 +622,8 @@ sudo apt-get install gdm3 xscreensaver
 sudo apt-get remove lightdm
 ```
 
+If the `Switch user` menu option doesn't work, press `ctrl+alt+f1` to switch user.
+
 ## Disable bluetooth from autostarting
 My system came with the blueman applet, which autostarts bluetooth everytime I resume from suspend, etc. Permanently disable this behavior:
 
