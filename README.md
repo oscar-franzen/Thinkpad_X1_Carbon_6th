@@ -678,6 +678,9 @@ installation command | program name | what it is for
 `sudo apt install iptraf` | `iptraf-ng` | monitoring network traffic
 `sudo apt install gpick` | `gpick` | a color picker
 
+## Check encoding of text file
+`encguess`
+
 ## Monitor CPU speed
 CPU speed:
 ```bash
