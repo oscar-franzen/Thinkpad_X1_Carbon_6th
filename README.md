@@ -254,6 +254,7 @@ iPhones can easily be mounted. First install:
 
 ```
 sudo apt install libimobiledevice-utils
+sudo apt install ifuse
 ```
 
 Then run:
