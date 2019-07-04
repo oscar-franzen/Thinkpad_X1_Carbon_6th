@@ -902,6 +902,7 @@ Login through
 timedatectl list-timezones
 
 sudo timedatectl set-timezone Asia/Manila
+sudo timedatectl set-timezone Europe/Stockholm
 ```
 
 ## GoPro
