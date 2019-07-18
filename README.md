@@ -603,6 +603,12 @@ this is clearly more information than is needed. Why does "Ubuntu" and "x86_64" 
 Mozilla/5.0 (X11; Linux; rv:56.0) Gecko/20100101 Firefox/56.0
 ```
 
+Taking it further, I think there is no need to broadcast that Linux and Firefox are under the hood at all:
+
+```
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.14
+```
+
 I think it's better not to completely remove the user agent string and not to change it to something obscure. Doing the latter will break multiple sites and it will instead facilitate fingerprinting.
 
 ## A simple calculator
