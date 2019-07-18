@@ -590,6 +590,21 @@ setting | set to | what it does
 `dom.webnotifications.enabled ` | false | disable notifications from websites
 `privacy.trackingprotection.cryptomining.enabled` | true | prevent crypto currency mining
 
+### Change user agent
+The default user agent in firefox will be something like
+
+```
+Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:56.0) Gecko/20100101 Firefox/56.0
+```
+
+this is clearly more information than is needed. Why does "Ubuntu" and "x86_64" need to be in the user agent string? Remove! Create a new key `general.useragent.override` and set it to, for example:
+
+```
+Mozilla/5.0 (X11; Linux; rv:56.0) Gecko/20100101 Firefox/56.0
+```
+
+I think it's better not to completely remove the user agent string and not to change it to something obscure. Doing the latter will break multiple sites and it will instead facilitate fingerprinting.
+
 ## A simple calculator
 `mate-calc`
 
