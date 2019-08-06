@@ -104,18 +104,15 @@ sudo update-initramfs -u
 
 ### Fix "pipe" problem on the Swedish Apple USB keyboard
 The pipe character is incorrectly mapped (mine was `alt+§`). Create a small helper script and make it executable `chmod +x helper.sh` and put it somewhere, and add it in Xfce4 (go to settings, Session and Startup, Application Autostart).
-```bash
-#!/bin/bash
+```#!/bin/bash
 
 if [[ `xinput -list | grep Apple` != "" ]]; then
   setxkbmap -device `xinput -list | grep Apple | sed 's/.*id=\(.*\)\t.*/\1/'` -layout se
   setxkbmap -device `xinput -list | grep Apple | sed 's/.*id=\(.*\)\t.*/\1/'` -option apple:badmap
+else
+    # if the apple keyboard is not connected
+    setxkbmap -device `xinput -list | grep 'AT Translated Set 2 keyboard' | sed 's/.*id=\(.*\)\t.*/\1/'` -layout se
 fi
-```
-
-### Fix "pipe" problem on the internal keyboard after disconnecting the Apple keyboard
-```bash
-setxkbmap -device `xinput -list | grep 'AT Translated Set 2 keyboard' | sed 's/.*id=\(.*\)\t.*/\1/'` -layout se
 ```
 
 ## Annoying screen flickering
