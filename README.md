@@ -113,6 +113,11 @@ if [[ `xinput -list | grep Apple` != "" ]]; then
 fi
 ```
 
+### Fix "pipe" problem on the internal keyboard after disconnecting the Apple keyboard
+```bash
+setxkbmap -device `xinput -list | grep 'AT Translated Set 2 keyboard' | sed 's/.*id=\(.*\)\t.*/\1/'` -layout se
+```
+
 ## Annoying screen flickering
 To get rid of the annoying screen flickering, for example when browsing, the following worked for me:
 
