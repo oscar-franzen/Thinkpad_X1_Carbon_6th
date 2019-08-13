@@ -687,7 +687,7 @@ Software to replace | Open source/free alternative
 --- | ---
 Microsoft Word | [LyX](https://www.lyx.org/)
 Microsoft Powerpoint/Excel | [Libreoffice](https://www.libreoffice.org/)
-Endnotes | [Zotero](https://www.zotero.org/)
+Endnotes/Mendeley | [Zotero](https://www.zotero.org/)
 Acrobat Reader | [Okular](https://okular.kde.org/)
 any flowchart app | [Graphviz](https://www.graphviz.org/)
 Sublime Text | [geany](https://www.geany.org/), [vim](https://www.vim.org/)
