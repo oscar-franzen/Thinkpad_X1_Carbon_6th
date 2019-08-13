@@ -140,6 +140,9 @@ EndSection
 Many times I hit capslock by accident so I prefer to have it disabled. It can be achieved by:
 ```bash
 setxkbmap -option 'ctrl:nocaps'
+
+# Enable capslock again
+#setxkbmap -option
 ```
 
 1. When the computer wakes up from sleep, capslock activates again. A more permanent solution would be to:
