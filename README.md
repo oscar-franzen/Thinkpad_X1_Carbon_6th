@@ -966,3 +966,224 @@ Restart postfix
 ```bash
 sudo service postfix restart
 ```
+
+## Running an e-mail server
+Running your own e-mail server is perhaps something we all should do instead of letting gmail read every one of our e-mails an building a profile of who we are. Running an e-mail server is actually a lot less complicated than it sounds. Here are the steps I took to setup postfix and anti-spam filters on a server I'm maintaining:
+
+1. Make sure your domainname is in `/etc/mailname`
+
+2. Install postfix
+```bash
+sudo apt-get install postfix
+sudo service postfix start
+```
+
+3. Edit `/etc/postfix/main.cf` and make sure `smtpd_tls_cert_file` and `smtpd_tls_key_file` point to the files with your https certificates. I use LetsEncrypt, so for me it is `/etc/letsencrypt/live/foobar.com/fullchain.pem` and `/etc/letsencrypt/live/foobar.com/privkey.pem`, respectively. `myhostname` should be set to your domainame, `foobar.com`. `myorigin` should point to `/etc/mailname`. `mydestination` for me is `$myhostname, foobar.com, localhost.com, , localhost`.
+
+Also make sure:
+
+```
+smtpd_use_tls=yes
+smtpd_tls_auth_only=yes
+smtp_tls_security_level=may
+```
+
+4. Add an Sender Policy Framework (SPF) record to your DNS config (this step is usually done in a config panel in the hosting company for your domainname):
+
+```
+TXT		v=spf1 ip4:<server IP goes here> ~all
+```
+
+5. DKIM is another layer of e-mail security, which we need to have:
+```
+sudo apt-get install opendkim opendkim-tools
+```
+
+6. My `/etc/opendkim.conf` looks like this:
+
+```
+AutoRestart             Yes
+AutoRestartRate         10/1h
+UMask                   002
+SyslogSuccess           Yes
+LogWhy                  Yes
+
+Canonicalization        relaxed/simple
+
+ExternalIgnoreList      refile:/etc/opendkim/TrustedHosts
+InternalHosts           refile:/etc/opendkim/TrustedHosts
+KeyTable                refile:/etc/opendkim/KeyTable
+SigningTable            refile:/etc/opendkim/SigningTable
+
+Mode                    sv
+PidFile                 /var/run/opendkim/opendkim.pid
+SignatureAlgorithm      rsa-sha256
+
+UserID                  opendkim:opendkim
+
+Socket                  inet:12301@localhost
+```
+
+7. Edit `SOCKET` using `sudo vim /etc/default/opendkim`, it can be different but mine is:
+
+`SOCKET="local:/var/spool/postfix/var/run/opendkim/opendkim.sock"`
+
+8. Setup postfix:
+
+```sudo vim /etc/postfix/main.cf```
+
+Add the following lines:
+```
+content_filter = smtp-amavis:[127.0.0.1]:10024
+
+milter_protocol = 2
+milter_default_action = accept
+
+smtpd_milters = inet:127.0.0.1:12301
+non_smtpd_milters = inet:127.0.0.1:12301
+```
+
+9. Run `sudo mkdir /etc/opendkim` and `sudo mkdir /etc/opendkim/keys`
+
+10. `sudo vim /etc/opendkim/TrustedHosts` add:
+
+```
+127.0.0.1
+localhost
+192.168.0.1/24
+```
+
+11. `sudo vim /etc/opendkim/KeyTable` add
+```
+mail._domainkey.foobar.com foobar.com:mail:/etc/opendkim/keys/foobar.com/mail.private
+```
+
+12. `sudo vim /etc/opendkim/SigningTable` add:
+```
+*@foobar.com mail._domainkey.foobar.com
+```
+
+13. `cd /etc/opendkim/keys`
+
+```
+sudo mkdir foobar.com
+cd foobar.com
+
+sudo opendkim-genkey -s mail -d foobar.com
+
+sudo chown opendkim:opendkim mail.private
+
+sudo cat mail.txt`
+```
+
+14. Add TXT record to the subdomain mail._domainkey in the DNS editor at the hosting provider:
+
+```
+v=DKIM1; h=sha256; k=rsa; p=<LONG KEY FROM ABOVE HERE>
+```
+
+15. Restart postfix
+```
+sudo service postfix restart
+
+# bug in the opendkim startup script, it doesn't read the port properly, solution is to start it manually
+sudo service opendkim stop
+sudo su
+opendkim
+exit
+
+netstat -l # check that it is running on port 12301
+```
+
+16. confirm it is there (you should see your key):
+
+```
+dig +short mail._domainkey.foobar.com TXT
+```
+
+17. Install amavis (for anti-spam); there is also spamassassin, but amavis is better.
+```bash
+sudo apt-get install amavisd-new spamassassin clamav-daemon
+sudo apt-get install libnet-dns-perl libmail-spf-perl pyzor razor
+sudo apt-get install arj bzip2 cabextract cpio file gzip lha nomarch pax rar unrar unzip unzoo zip zoo
+
+sudo adduser clamav amavis
+sudo adduser amavis clamav
+sudo su - amavis -s /bin/bash
+razor-admin -create
+razor-admin -register
+pyzor discover
+
+sudo service amavis start
+sudo service spamassassin stop
+```
+
+18. Activate spam and antivirus detection in Amavis by uncommenting lines in `/etc/amavis/conf.d/15-content_filter_mode`.
+
+19. After configuration Amavis needs to be restarted: `sudo /etc/init.d/amavis restart`
+
+20. For postfix integration, you need to add the content_filter configuration variable to the Postfix configuration file `/etc/postfix/main.cf`. This instructs postfix to pass messages to amavis at a given IP address and port:
+
+```
+content_filter = smtp-amavis:[127.0.0.1]:10024
+```
+
+21. Next edit `/etc/postfix/master.cf` and add the following to the end of the file:
+
+```
+smtp-amavis     unix    -       -       -       -       2       smtp
+        -o smtp_data_done_timeout=1200
+        -o smtp_send_xforward_command=yes
+        -o disable_dns_lookups=yes
+        -o max_use=20
+
+127.0.0.1:10025 inet    n       -       -       -       -       smtpd
+        -o content_filter=
+        -o local_recipient_maps=
+        -o relay_recipient_maps=
+        -o smtpd_restriction_classes=
+        -o smtpd_delay_reject=no
+        -o smtpd_client_restrictions=permit_mynetworks,reject
+        -o smtpd_helo_restrictions=
+        -o smtpd_sender_restrictions=
+        -o smtpd_recipient_restrictions=permit_mynetworks,reject
+        -o smtpd_data_restrictions=reject_unauth_pipelining
+        -o smtpd_end_of_data_restrictions=
+        -o mynetworks=127.0.0.0/8
+        -o smtpd_error_sleep_time=0
+        -o smtpd_soft_error_limit=1001
+        -o smtpd_hard_error_limit=1000
+        -o smtpd_client_connection_count_limit=0
+        -o smtpd_client_connection_rate_limit=0
+        -o receive_override_options=no_header_body_checks,no_unknown_recipient_checks
+
+Also add the following two lines immediately below the "pickup" transport service:
+
+-o content_filter=
+-o receive_override_options=no_header_body_checks
+```
+
+```
+sudo service postfix restart
+```
+
+```
+If the filtering is not happening, adding the following to /etc/amavis/conf.d/50-user may help:
+
+@local_domains_acl = ( ".$mydomain" );
+
+sudo /etc/init.d/postfix restart
+sudo /etc/init.d/clamav-daemon restart
+sudo /etc/init.d/amavis restart
+```
+
+22. decrease the threshold for spam
+
+```
+sudo vim /etc/amavis/conf.d/20-debian_defaults
+# change to 5
+$sa_kill_level_deflt = 5; # triggers spam evasive actions
+sudo service amavis restart
+```
+
+23. Done! Enjoy your mail server. Now big brother cannot 'noop anymore.
