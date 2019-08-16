@@ -1186,4 +1186,4 @@ $sa_kill_level_deflt = 5; # triggers spam evasive actions
 sudo service amavis restart
 ```
 
-23. Done! Enjoy your mail server. Now big brother cannot 'noop anymore.
+23. Done! Enjoy your mail server. Now big brother cannot 'noop anymore. Final note: it will take some time to build up a "reputation" in order to avoid being classified as spam by other e-mail servers. Patience is needed.
