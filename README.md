@@ -942,31 +942,6 @@ cd /run/user/1000/gvfs/
 ffmpeg -i input.mp4 -b 2000000 output.mp4
 ```
 
-## Postfix: ignore certain domains
-How to ignore, for example, all incoming emails from the domain @grab.com
-```bash
-sudo vim /etc/postfix/header_checks
-```
-
-Add the following line:
-```
-/^From: .*@grab.com/       REJECT
-```
-
-```bash
-sudo vim /etc/postfix/main.cf
-```
-
-Add the following line:
-```
-header_checks = regexp:/etc/postfix/header_checks
-```
-
-Restart postfix
-```bash
-sudo service postfix restart
-```
-
 ## Running an e-mail server
 Running your own e-mail server is perhaps something we all should do instead of letting gmail read every one of our e-mails an building a profile of who we are. Running an e-mail server is actually a lot less complicated than it sounds. Here are the steps I took to setup postfix and anti-spam filters on a server I'm maintaining:
 
@@ -1187,3 +1162,28 @@ sudo service amavis restart
 ```
 
 23. Done! Enjoy your mail server. Now big brother cannot 'noop anymore. Final note: it will take some time to build up a "reputation" in order to avoid being classified as spam by other e-mail servers. Patience is needed.
+
+### ignore certain domains
+How to ignore, for example, all incoming emails from the domain @grab.com
+```bash
+sudo vim /etc/postfix/header_checks
+```
+
+Add the following line:
+```
+/^From: .*@grab.com/       REJECT
+```
+
+```bash
+sudo vim /etc/postfix/main.cf
+```
+
+Add the following line:
+```
+header_checks = regexp:/etc/postfix/header_checks
+```
+
+Restart postfix
+```bash
+sudo service postfix restart
+```
