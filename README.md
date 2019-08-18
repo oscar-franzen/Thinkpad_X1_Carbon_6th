@@ -598,6 +598,7 @@ setting | set to | what it does
 
 ## Stupidity
 setting | set to | what it does
+--- | --- | ---
 app.update.auto | false | I update firefox when I want, not when firefox wants.
 
 ### Change user agent
