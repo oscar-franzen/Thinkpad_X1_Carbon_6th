@@ -601,7 +601,7 @@ setting | set to | what it does
 ### Stupidity
 setting | set to | what it does
 --- | --- | ---
-app.update.auto | false | I update firefox when I want, not when firefox wants.
+app.update.auto | false | I don't think it is a good idea to let firefox decide when it's time to update.
 
 ### Change user agent
 The default user agent in firefox will be something like
