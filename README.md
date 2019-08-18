@@ -596,6 +596,10 @@ setting | set to | what it does
 `dom.webnotifications.enabled ` | false | disable notifications from websites
 `privacy.trackingprotection.cryptomining.enabled` | true | prevent crypto currency mining
 
+## Stupidity
+setting | set to | what it does
+app.update.auto | false | I update firefox when I want, not when firefox wants.
+
 ### Change user agent
 The default user agent in firefox will be something like
 
