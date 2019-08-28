@@ -1196,3 +1196,12 @@ Restart postfix
 ```bash
 sudo service postfix restart
 ```
+
+# Shared memory segments
+Useful after working with the [STAR aligner](https://github.com/alexdobin/STAR) to delete memory segments.
+```bash
+# list
+ipcs
+# remove specific
+ipcrm -m <shmid>
+```
