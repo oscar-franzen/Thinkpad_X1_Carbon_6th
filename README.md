@@ -1205,3 +1205,18 @@ ipcs
 # remove specific
 ipcrm -m <shmid>
 ```
+
+# Restore terminal window after a stalled SSH
+See here: https://apple.stackexchange.com/questions/35524/what-can-i-do-when-my-ssh-session-is-stuck
+
+Typed `suspend` while having active SSH sessions in a terminal just to get back and having to close the terminal window? No more.
+
+```
+~. to terminate the connection (alt gr+tilde button+space+dot+enter)
+``` 
+
+# Remove `whoopsie`
+I found this one running and I had no idea what it is and why it is there. It turns out to be an ubuntu error reporting daemon. I decided to remove it.
+```
+sudo apt-get purge whoopsie
+```
