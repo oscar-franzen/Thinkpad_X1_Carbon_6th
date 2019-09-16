@@ -843,7 +843,7 @@ xinput set-prop `xinput | grep Synaptics | sed 's/.*id=\(.*\)\t.*/\1/'` "Device 
 
 ## Trackpad stops working after waking up from sleep
 ```bash
-sudo rmmod psmouse
+sudo modprobe -r psmouse
 sudo modprobe psmouse
 ```
 
