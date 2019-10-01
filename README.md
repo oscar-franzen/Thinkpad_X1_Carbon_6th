@@ -1220,3 +1220,27 @@ I found this one running and I had no idea what it is and why it is there. It tu
 ```
 sudo apt-get purge whoopsie
 ```
+
+# Xfce4 version 4.14.0 - high CPU usage issue
+* https://bugzilla.xfce.org/show_bug.cgi?id=15963
+```
+$ xfwm4 -V
+	This is xfwm4 version 4.14.0 (revision ed87ef663) for Xfce 4.14
+	Released under the terms of the GNU General Public License.
+	Compiled against GTK+-3.22.30, using GTK+-3.22.30.
+
+	Build configuration and supported features:
+	- Startup notification support:                 Yes
+	- XSync support:                                Yes
+	- Render support:                               Yes
+	- Xrandr support:                               Yes
+	- Xpresent support:                             Yes
+	- Embedded compositor:                          Yes
+	- Epoxy support:                                Yes
+	- KDE systray proxy (deprecated):               No
+```
+
+Run and restart xfce4:
+```
+xfconf-query -c xfwm4 -p /general/vblank_mode -s xpresent
+```
