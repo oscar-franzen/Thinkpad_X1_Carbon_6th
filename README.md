@@ -1268,6 +1268,7 @@ wmctrl -i -a `wmctrl -l | tail -n1 | cut -d ' ' -f1`
 ```
 
 ### Disable `compton` fading, shadows, etc
+* More compton tweaks: https://wiki.archlinux.org/index.php/Compton
 In `/etc/xdg/xdg-xubuntu/compton.conf` set
 ```
 fading = false;
