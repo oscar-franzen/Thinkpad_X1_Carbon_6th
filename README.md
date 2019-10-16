@@ -1266,3 +1266,10 @@ Create a small helper script and link F3 to it (don't forget to chmod +x it):
 xfce4-terminal
 wmctrl -i -a `wmctrl -l | tail -n1 | cut -d ' ' -f1`
 ```
+
+### Disable `compton` fading, shadows, etc
+In `/etc/xdg/xdg-xubuntu/compton.conf` set
+```
+fading = false;
+shadow = false;
+```
