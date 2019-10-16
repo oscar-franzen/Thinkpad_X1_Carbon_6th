@@ -1222,9 +1222,10 @@ sudo apt-get purge whoopsie
 ```
 
 # Xfce4 version 4.14.0 - high CPU usage issue
+* This does not seem to fix the problem entirely
 * https://bugzilla.xfce.org/show_bug.cgi?id=15963
 ```
-$ xfwm4 -V
+xfwm4 -V
 	This is xfwm4 version 4.14.0 (revision ed87ef663) for Xfce 4.14
 	Released under the terms of the GNU General Public License.
 	Compiled against GTK+-3.22.30, using GTK+-3.22.30.
@@ -1243,4 +1244,25 @@ $ xfwm4 -V
 Run and restart xfce4:
 ```
 xfconf-query -c xfwm4 -p /general/vblank_mode -s xpresent
+```
+
+# The MATE desktop environment
+* A maintained fork of GNOME2
+
+```
+sudo apt-get install mate-desktop-environment
+```
+
+### Window focusing problem
+* I still prefer `xfce4-terminal`, and I usually add a shortcut so that a terminal window opens up with when pressing F3. A bug causes the terminal window to end up _below_ current windows. A small workaround using `wmctrl`:
+
+First install wmctrl:
+```
+sudo apt install wmctrl
+```
+
+Create a small helper script and link F3 to it (don't forget to chmod +x it):
+```
+xfce4-terminal
+wmctrl -i -a `wmctrl -l | tail -n1 | cut -d ' ' -f1`
 ```
