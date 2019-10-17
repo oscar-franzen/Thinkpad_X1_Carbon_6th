@@ -24,6 +24,15 @@ $ uname -a | cut -d ' ' -f 3
 ## TODO
 * Check BIOS setting for powersaving for Thunderbolt 3
 
+## Plain text login
+I like being greeted by the plain cold login prompt and running `startx` to fire up X. I prefer not to use ligthDM, gdm3, etc. In `/etc/default/grub`, make sure "quiet splash" is replaced with "text" in the `GRUB_CMDLINE_LINUX_DEFAULT`. Then run `sudo update-grub`.
+
+Disable lightdm:
+
+```bash
+sudo systemctl disable lightdm
+```
+
 ## Crucial BIOS firmware update
 The BIOS of the machine needs to be updated to version 1.30, because unfortunately, Lenovo has removed support for suspend to RAM support (aka S3 deep sleep). Instead the TX1C6 supports a new macish sleep mode (where the system can be woken up anytime by software) called Windows Modern Standby mode, but the Linux kernel does not support it yet. Lenovo later issued a BIOS update for the TX1C6, allowing the use of S3.
 
