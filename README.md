@@ -1275,3 +1275,7 @@ In `/etc/xdg/xdg-xubuntu/compton.conf` set
 fading = false;
 shadow = false;
 ```
+
+# Enter Ubuntu's rescue mode
+* Hold shift just after the Vendor "Lenovo" screen
+* Enable networking from CLI with `service network-manager start`
