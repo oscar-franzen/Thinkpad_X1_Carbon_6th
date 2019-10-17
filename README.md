@@ -27,7 +27,7 @@ $ uname -a | cut -d ' ' -f 3
 ## Plain text login
 I like being greeted by the plain cold login prompt and running `startx` to fire up X. I prefer not to use ligthDM, gdm3, etc. In `/etc/default/grub`, make sure "quiet splash" is replaced with "text" in the `GRUB_CMDLINE_LINUX_DEFAULT`. Then run `sudo update-grub`.
 
-Disable lightdm:
+Make sure to also disable lightdm (if that is what you run as login manager):
 
 ```bash
 sudo systemctl disable lightdm
