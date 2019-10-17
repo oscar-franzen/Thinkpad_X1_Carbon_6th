@@ -123,7 +123,7 @@ To get rid of the annoying screen flickering, for example when browsing, the fol
 
 1. Create another X11 config file:
 ```bash
-sudo vim /usr/share/X11/xorg.conf.d/20-intel_flicker_fix.conf
+sudo vim /etc/X11/xorg.conf.d/20-intel-graphics.conf
 ```
 
 Add the following lines:
