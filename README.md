@@ -1288,3 +1288,20 @@ shadow = false;
 # Enter Ubuntu's rescue mode
 * Hold shift just after the Vendor "Lenovo" screen
 * Enable networking from CLI with `service network-manager start`
+
+### Reload /etc/fstab
+```
+sudo mount -a
+```
+
+# icewm
+```
+sudo apt-get install icewm
+```
+Add to `~/.xinitrc`:
+```
+exec icewmbg &
+exec icewm
+```
+
+Start through `startx`.
