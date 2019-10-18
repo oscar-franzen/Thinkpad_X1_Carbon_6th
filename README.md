@@ -1289,7 +1289,7 @@ shadow = false;
 * Hold shift just after the Vendor "Lenovo" screen
 * Enable networking from CLI with `service network-manager start`
 
-### Reload /etc/fstab
+# Reload /etc/fstab
 ```
 sudo mount -a
 ```
