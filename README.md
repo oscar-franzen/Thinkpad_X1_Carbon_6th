@@ -128,7 +128,7 @@ fi
 ```
 
 ## Annoying screen flickering
-To get rid of the annoying screen flickering, for example when browsing, the following worked for me:
+To get rid of screen flickering when scrolling, the following might work:
 
 1. Create another X11 config file:
 ```bash
