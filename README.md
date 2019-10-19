@@ -242,13 +242,16 @@ Identify the UUID of the external backup disk
 sudo blkid
 ```
 
-Create a small helper script and put it somewhere (`/home/foobar` is the directory to be backed up and `/mount/point/of/backup` is the mounted external drive; `.exclude_backup_patterns` contains optional directories to be excluded):
+Create a small helper script and put it somewhere (`/home/foobar` is the directory to be backed up and `/mount/point/of/backup` is the mounted external drive; `.exclude_backup_patterns` contains optional directories to be excluded, one directory path per line). I removed the default rsync `--perm` option to preserve permissions, because if I have a directory set to -rw, this directory cannot be deleted by rsync.
 
 ```bash
 #!/bin/bash
 
 if [ -e /dev/disk/by-uuid/UUID ]; then
-  /path/to/rsync_tmbackup.sh --no-auto-expire /home/foobar /mount/point/of/backup .exclude_backup_patterns
+  /path/to/rsync_tmbackup.sh --rsync-set-flags "-D --compress \
+  --numeric-ids --links --hard-links --one-file-system --itemize-changes --times \
+  --recursive --owner --group --stats --human-readable" --no-auto-expire \
+    /home/foobar /mount/point/of/backup .exclude_backup_patterns
 else
   echo "backup drive not found"
 fi
