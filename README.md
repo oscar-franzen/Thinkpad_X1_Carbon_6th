@@ -15,7 +15,7 @@ $ sudo dmidecode -s system-version
 ThinkPad X1 Carbon 6th
 
 $ uname -a | cut -d ' ' -f 3
-4.18.0-17-generic
+5.3.6-050306-generic
 ```
 
 ### Non-fixable problems
@@ -1308,3 +1308,7 @@ exec icewm
 ```
 
 Start through `startx`.
+
+# Turn mitigations off
+* See here for details: https://linuxreviews.org/HOWTO_make_Linux_run_blazing_fast_(again)_on_Intel_CPUs
+* In `/etc/default/grub` add `mitigations=off` to `GRUB_CMDLINE_LINUX_DEFAULT` and run `sudo update-grub`
