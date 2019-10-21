@@ -250,7 +250,7 @@ Create a small helper script and put it somewhere (`/home/foobar` is the directo
 if [ -e /dev/disk/by-uuid/UUID ]; then
   /path/to/rsync_tmbackup.sh --rsync-set-flags "-D --compress \
   --numeric-ids --links --hard-links --one-file-system --itemize-changes --times \
-  --recursive --owner --group --stats --human-readable" --no-auto-expire \
+  --recursive --owner --group --stats --human-readable --chmod=ugo=rw" --no-auto-expire \
     /home/foobar /mount/point/of/backup .exclude_backup_patterns
 else
   echo "backup drive not found"
