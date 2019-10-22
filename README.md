@@ -1298,6 +1298,7 @@ sudo mount -a
 ```
 
 # icewm
+A simple, lightweight, no BS, window manager.
 ```
 sudo apt-get install icewm
 ```
