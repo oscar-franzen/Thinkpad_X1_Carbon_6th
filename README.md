@@ -1304,7 +1304,8 @@ sudo apt-get install icewm
 Add to `~/.xinitrc`:
 ```
 exec icewmbg &
-exec icewm
+exec xscreensaver -nosplash &
+exec dbus-launch icewm-session
 ```
 
 Start through `startx`.
