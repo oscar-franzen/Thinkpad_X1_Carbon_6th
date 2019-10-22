@@ -1312,5 +1312,5 @@ exec dbus-launch icewm-session
 Start through `startx`.
 
 # Turn mitigations off
-* See here for details: https://linuxreviews.org/HOWTO_make_Linux_run_blazing_fast_(again)_on_Intel_CPUs
+* See here for details and warnings: https://linuxreviews.org/HOWTO_make_Linux_run_blazing_fast_(again)_on_Intel_CPUs
 * In `/etc/default/grub` add `mitigations=off` to `GRUB_CMDLINE_LINUX_DEFAULT` and run `sudo update-grub`
