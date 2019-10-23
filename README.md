@@ -723,6 +723,7 @@ installation command | program name | what it is for
 `sudo apt install iptraf` | `iptraf-ng` | monitoring network traffic
 `sudo apt install gpick` | `gpick` | a color picker
 `sudo apt install tree` | `tree` | [Tree](http://mama.indstate.edu/users/ice/tree/), print structure of a directory tree
+`sudo apt install pylint3` | `pylint` | linting python 3
 
 ## Check encoding of text file
 `encguess`
