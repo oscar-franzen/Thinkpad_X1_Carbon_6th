@@ -1316,3 +1316,27 @@ Start through `startx`.
 
 # xscreensaver
 The config resides in `~/.xscreensaver`. The only thing I changed was to set `lock:` to `False`, because having xscreensaver lock caused me a problem when disconnecting external screen/sleep suspend.
+
+# touchpad sensitivity
+* Details: https://help.ubuntu.com/community/SynapticsTouchpad
+
+```
+# figure out the id
+$ xinput --list
+⎡ Virtual core pointer                    	id=2	[master pointer  (3)]
+⎜   ↳ Virtual core XTEST pointer              	id=4	[slave  pointer  (2)]
+⎜   ↳ Logitech Wireless Mouse                 	id=9	[slave  pointer  (2)]
+⎜   ↳ Synaptics TM3288-011                    	id=10	[slave  pointer  (2)]
+⎣ Virtual core keyboard                   	id=3	[master keyboard (2)]
+    ↳ Virtual core XTEST keyboard             	id=5	[slave  keyboard (3)]
+    ↳ Power Button                            	id=6	[slave  keyboard (3)]
+    ↳ Video Bus                               	id=7	[slave  keyboard (3)]
+    ↳ Sleep Button                            	id=8	[slave  keyboard (3)]
+    ↳ Integrated Camera: Integrated C         	id=12	[slave  keyboard (3)]
+    ↳ AT Translated Set 2 keyboard            	id=13	[slave  keyboard (3)]
+    ↳ ThinkPad Extra Buttons                  	id=14	[slave  keyboard (3)]
+    ↳ Logitech Wireless Mouse                 	id=16	[slave  keyboard (3)]
+
+
+xinput --set-prop 10 "Synaptics Finger" 50 40 107
+```
