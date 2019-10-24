@@ -1346,3 +1346,14 @@ xinput --set-prop 10 "Synaptics Finger" 50 40 107
 ```
 /home/USERNAME/.local/share/xorg/
 ```
+
+# git
+### password-less ssh interactions
+1. Option 1: remove password from the ssh keys
+2. Option 2:
+
+```bash
+ssh-agent
+export SSH_AUTH_SOCK=/tmp/ssh-XXXXXXX/agent.XXXX
+ssh-add ~/.ssh/id_rsa_XXXXX
+```
