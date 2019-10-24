@@ -1340,3 +1340,9 @@ $ xinput --list
 
 xinput --set-prop 10 "Synaptics Finger" 50 40 107
 ```
+
+# Xorg
+### Log file location
+```
+/home/USERNAME/.local/share/xorg/
+```
