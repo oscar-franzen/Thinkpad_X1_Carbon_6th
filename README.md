@@ -1303,6 +1303,7 @@ sudo apt-get install icewm
 ```
 Add to `~/.xinitrc`:
 ```
+exec xrdb -merge ~/.Xresources
 exec icewmbg &
 exec xscreensaver -nosplash &
 exec dbus-launch icewm-session
