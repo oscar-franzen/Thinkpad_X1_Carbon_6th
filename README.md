@@ -1358,3 +1358,21 @@ ssh-agent
 export SSH_AUTH_SOCK=/tmp/ssh-XXXXXXX/agent.XXXX
 ssh-add ~/.ssh/id_rsa_XXXXX
 ```
+
+# No GUI for GPG
+* https://superuser.com/questions/520980/how-to-force-gpg-to-use-console-mode-pinentry-to-prompt-for-passwords
+```
+sudo apt-get install pinentry-tty
+```
+
+In `~/.gnupg/gpg-agent.conf` add:
+
+```
+pinentry-program /usr/bin/pinentry-tty
+```
+
+Reload
+
+```
+gpg-connect-agent reloadagent /bye
+```
