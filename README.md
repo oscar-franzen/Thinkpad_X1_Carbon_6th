@@ -1303,7 +1303,6 @@ sudo apt-get install icewm
 ```
 Add to `~/.xinitrc`:
 ```
-exec xrdb -merge ~/.Xresources
 exec icewmbg &
 exec xscreensaver -nosplash &
 exec dbus-launch icewm-session
@@ -1376,3 +1375,6 @@ Reload
 ```
 gpg-connect-agent reloadagent /bye
 ```
+
+# Prevent going to sleep upon lid closure when on battery
+`sudo vim /etc/systemd/logind.conf` and set `HandleLidSwitch=ignore` then `systemctl restart systemd-logind.service`.
