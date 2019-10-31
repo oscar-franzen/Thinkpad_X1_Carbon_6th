@@ -1303,7 +1303,7 @@ sudo apt-get install icewm
 ```
 Add to `~/.xinitrc`:
 ```
-exec icewmbg &
+exec icewmbg -a=1 &
 exec xscreensaver -nosplash &
 exec dbus-launch icewm-session
 exec xset r rate 200 40
