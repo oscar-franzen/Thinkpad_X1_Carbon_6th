@@ -1306,6 +1306,7 @@ Add to `~/.xinitrc`:
 exec icewmbg &
 exec xscreensaver -nosplash &
 exec dbus-launch icewm-session
+exec xset r rate 200 40
 ```
 
 Start through `startx`.
