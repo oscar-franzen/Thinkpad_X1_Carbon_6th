@@ -1300,6 +1300,7 @@ sudo mount -a
 A simple, lightweight, no BS, window manager.
 ```
 sudo apt-get install icewm
+sudo apt-get install xkbset
 ```
 Add to `~/.xinitrc`:
 ```
@@ -1307,6 +1308,16 @@ exec icewmbg -a=1 &
 exec xscreensaver -nosplash &
 exec dbus-launch icewm-session
 exec xset r rate 200 40
+# list settings
+#xkbset q
+# disable slow keys
+xkbset -sl
+# disable accessibility
+xkbset -a
+# repeat rate
+xkbset r rate 200
+xkbset bo 10
+xkbset -bo
 ```
 
 Start through `startx`.
