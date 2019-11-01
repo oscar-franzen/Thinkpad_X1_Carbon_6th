@@ -753,6 +753,8 @@ make
 make install
 ```
 
+# if `.tmux.conf` is changed, all running instances of tmux must be closed before this
+# will take effect
 ```
 $ cat ~/.tmux.conf
 bind '"' split-window -c "#{pane_current_path}"
@@ -1390,3 +1392,13 @@ gpg-connect-agent reloadagent /bye
 
 # Prevent going to sleep upon lid closure when on battery
 `sudo vim /etc/systemd/logind.conf` and set `HandleLidSwitch=ignore` then `systemctl restart systemd-logind.service`.
+
+# urxvt
+```
+$ cat ~/.Xdefaults
+URxvt*background: black
+URxvt*foreground: white
+
+# default font is called "6x13"
+URxvt.font: 7x14
+```
