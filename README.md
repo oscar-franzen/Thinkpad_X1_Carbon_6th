@@ -924,6 +924,9 @@ set number
 syntax on
 
 ca W w
+# good for white background
+colorscheme morning
+# Alternatives: blue.vim darkblue.vim default.vim delek.vim desert.vim elflord.vim evening.vim koehler.vim morning.vim murphy.vim pablo.vim peachpuff.vim ron.vim shine.vim slate.vim torte.vim zellner.vim
 ```
 
 ## keyboard
