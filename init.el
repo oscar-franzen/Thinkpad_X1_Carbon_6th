@@ -103,11 +103,6 @@
 ;; stop creating those #auto-save# files
 (setq auto-save-default nil)
 
-(global-set-key (kbd "C-x o") 'ace-window)
-(global-set-key (kbd "M-p") 'ace-window)
-
-
-
 (global-hl-line-mode 1)
 ;; underline the current line
 ;(set-face-attribute hl-line-face nil :underline t)
@@ -131,6 +126,8 @@
 (setq highlight-indent-guides-character ?\|)
 ;(set-default-font "-*-terminus-medium-*-*-*-*-70-*-*-*-*-*-*")
 (set-default-font "-misc-fixed-medium-r-semicondensed--13-*-*-*-c-60-iso8859-1")
+(setq default-frame-alist '((font . "-misc-fixed-medium-r-semicondensed--13-*-*-*-c-60-iso8859-1")))
+(add-to-list 'default-frame-alist '(font . "-misc-fixed-medium-r-semicondensed--13-*-*-*-c-60-iso8859-1"))
 
 ;(global-whitespace-mode 1)
 
@@ -226,3 +223,20 @@ With argument ARG, do this that many times."
 ; https://stackoverflow.com/questions/780796/emacs-ess-mode-tabbing-for-comment-region
 (setq ess-indent-with-fancy-comments nil)
 (require 'ess)
+
+; https://github.com/abo-abo/ace-window
+; When there are two windows, ace-window will call other-window
+; (unless aw-dispatch-always is set non-nil). If there are more, each
+; window will have the first character of its window label highlighted
+; at the upper left of the window.
+(global-set-key (kbd "C-x o") 'ace-window)
+;(global-set-key (kbd "M-p") 'ace-window)
+
+; show file path in title
+(setq-default frame-title-format '("%f"))
+
+(defun on-after-init ()
+  (unless (display-graphic-p (selected-frame))
+    (load-theme 'misterioso)))
+
+(add-hook 'window-setup-hook 'on-after-init)
