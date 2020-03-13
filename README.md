@@ -1405,3 +1405,8 @@ URxvt*foreground: white
 # default font is called "6x13"
 URxvt.font: 7x14
 ```
+# Figure out which process launched a certain X window
+```
+xwininfo
+xprop -id <ID>
+```
