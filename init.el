@@ -240,3 +240,7 @@ With argument ARG, do this that many times."
     (load-theme 'misterioso)))
 
 (add-hook 'window-setup-hook 'on-after-init)
+
+(set-face-attribute 'mode-line-buffer-id nil :foreground "white")
+
+(setq web-mode-engines-alist '(("php" . "\\.html\\'")))
