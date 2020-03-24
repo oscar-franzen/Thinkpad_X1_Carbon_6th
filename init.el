@@ -244,3 +244,6 @@ With argument ARG, do this that many times."
 (set-face-attribute 'mode-line-buffer-id nil :foreground "white")
 
 (setq web-mode-engines-alist '(("php" . "\\.html\\'")))
+
+(tool-bar-mode -1)
+(menu-bar-mode -1)
