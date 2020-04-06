@@ -49,6 +49,21 @@ $ lspci
 ### Non-fixable problems
 * The screen has one dead pixel
 
+### Intermittent wifi issues
+* https://askubuntu.com/questions/616119/unstable-wireless-with-intel-7260-iwlwifi-after-upgrade-to-15-04
+```bash
+
+# Add the below line to /etc/modprobe.d/iwlwifi.conf
+options iwlwifi 11n_disable=1
+
+sudo modprobe -r iwlmvm
+sudo modprobe -r iwlwifi
+sudo modprobe iwlwifi
+
+# confirm the option is loaded
+modinfo iwlwifi
+```
+
 ## TODO
 * Check BIOS setting for powersaving for Thunderbolt 3
 
