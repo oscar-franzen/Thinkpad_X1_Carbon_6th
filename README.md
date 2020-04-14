@@ -1399,6 +1399,9 @@ $ xinput --list
 
 
 xinput --set-prop 10 "Synaptics Finger" 50 40 107
+
+# disable it completely
+xinput --disable 10
 ```
 
 # Xorg
