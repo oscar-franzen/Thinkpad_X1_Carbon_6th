@@ -1458,9 +1458,10 @@ xprop -id <ID>
 ```
 
 # i3
-### run xrandr at launch
+### run xrandr at launch and disable touchpad
 Put in `/etc/X11/Xsession.d/90xrandr`:
 
 ```
 xrandr --output eDP1 --mode 2048x1152
+xinput --disable $(xinput --list | grep "Synaptics TM3288-011" | sed 's/.*id=\([0-9]*\).*/\1/')
 ```
