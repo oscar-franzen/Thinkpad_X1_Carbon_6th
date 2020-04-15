@@ -1456,3 +1456,11 @@ URxvt.font: 7x14
 xwininfo
 xprop -id <ID>
 ```
+
+# i3
+### run xrandr at launch
+Put in /etc/X11/Xsession.d/90xrandr
+
+```
+xrandr --output eDP1 --mode 2048x1152
+```
