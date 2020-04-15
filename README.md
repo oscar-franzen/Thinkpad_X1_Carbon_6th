@@ -54,7 +54,7 @@ $ lspci
 ```bash
 
 # Add the below line to /etc/modprobe.d/iwlwifi.conf
-options iwlwifi 11n_disable=1 power_save=0
+options iwlwifi 11n_disable=8 power_save=0 swcrypto=1
 
 sudo modprobe -r iwlmvm
 sudo modprobe -r iwlwifi
