@@ -1465,3 +1465,11 @@ Put in `/etc/X11/Xsession.d/90xrandr`:
 xrandr --output eDP1 --mode 2048x1152
 xinput --disable $(xinput --list | grep "Synaptics TM3288-011" | sed 's/.*id=\([0-9]*\).*/\1/')
 ```
+
+# quotable-printable
+```
+apt install tokyocabinet-bin
+
+# decode
+tcucodec quote -d myInput.qp
+```
