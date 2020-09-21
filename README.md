@@ -1473,3 +1473,9 @@ apt install tokyocabinet-bin
 # decode
 tcucodec quote -d myInput.qp
 ```
+
+# execsnoop
+A small tool written in Bash useful for detecting small shortlived
+processes.
+
+* https://github.com/brendangregg/perf-tools/blob/master/execsnoop
