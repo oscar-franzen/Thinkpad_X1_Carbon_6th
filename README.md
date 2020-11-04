@@ -836,8 +836,10 @@ sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/to
 DISABLE_AUTO_UPDATE="true"
 source $ZSH/oh-my-zsh.sh
 
-PROMPT="
-%{$fg[blue]%}%n${fg_white}[${fg_blue}%~${fg_white}]> "
+# %n = username
+# %m = machine/hostname
+PROMPT="%{$fg[blue]%}%n${fg_white}[${fg_blue}%~${fg_white}]> "
+
 autoload -U compinit
 setopt autocd
 setopt auto_resume
