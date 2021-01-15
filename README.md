@@ -1526,3 +1526,10 @@ Create the zombie
 ```bash
 { nohup ./zombie & } &
 ```
+
+# Making emacs work nicely with zsh
+Add the following line to `~/.zshenv`:
+
+```bash
+export EMACS="*term*"
+```
