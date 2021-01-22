@@ -1533,3 +1533,28 @@ Add the following line to `~/.zshenv`:
 ```bash
 export EMACS="*term*"
 ```
+
+# xterm
+put these in `~/.Xdefaults` _and_ `~/.Xresources`.
+
+```
+xterm*background: #ffffff
+xterm*foreground: #000000
+xterm.*backarrowKey: false 
+
+xterm*metaSendsEscape:  true
+xterm*eightBitInput: false
+
+xterm*VT100.Translations: #override \
+                 Ctrl Shift <Key>V:    insert-selection(CLIPBOARD) \n\
+                 Ctrl Shift <Key>C:    copy-selection(CLIPBOARD)
+
+```
+
+then
+
+```
+xrdb ~/.Xresources
+pkill xterm
+xterm
+```
