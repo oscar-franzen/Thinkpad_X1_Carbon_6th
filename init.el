@@ -247,3 +247,62 @@ With argument ARG, do this that many times."
 
 (tool-bar-mode -1)
 (menu-bar-mode -1)
+
+(set-cursor-color "#5D8AA8")
+
+; prevent opening "help" when accidentally pressing C-backspace
+(global-set-key (kbd "C-h") 'delete-backward-char)
+
+(defun move-line-up ()
+  "Move up the current line."
+  (interactive)
+  (transpose-lines 1)
+  (forward-line -2)
+  (indent-according-to-mode))
+
+(defun move-line-down ()
+  "Move down the current line."
+  (interactive)
+  (forward-line 1)
+  (transpose-lines 1)
+  (forward-line -1)
+  (indent-according-to-mode))
+
+(global-set-key [(meta shift up)]  'move-line-up)
+(global-set-key [(meta shift down)]  'move-line-down)
+
+(setq-default c-basic-offset 4)
+(global-linum-mode t)               ;; Enable line numbers globally
+
+(setq scroll-step            1
+      scroll-conservatively  10000)
+
+(setq x-select-enable-primary nil)
+
+(global-hl-line-mode 1)
+;; underline the current line
+;(set-face-attribute hl-line-face nil :underline t)
+
+(show-paren-mode 1)
+
+(defun duplicate-line()
+  (interactive)
+  (move-beginning-of-line 1)
+  (kill-line)
+  (yank)
+  (open-line 1)
+  (next-line 1)
+  (yank)
+  )
+
+(global-set-key (kbd "C-d") 'duplicate-line)
+
+(add-hook 'smooth-scroll 'smooth-scroll-mode)
+(setq mouse-wheel-scroll-amount '(1 ((shift) . 1))) ;; one line at a time
+
+(set-face-attribute 'mode-line-buffer-id nil :foreground "white")
+
+(column-number-mode 1)
+(size-indication-mode 1)
+
+(add-hook 'org-mode-hook 'org-indent-mode)
