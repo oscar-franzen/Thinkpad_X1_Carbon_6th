@@ -877,6 +877,12 @@ alias cal="ncal -bM"
 
 # remove 'l' as an alias
 unalias l
+
+# change the color of directories from blue to violet
+LS_COLORS=$LS_COLORS:'di=0;35:' ; export LS_COLORS
+
+# disable capslock
+alias disable_capslock="/usr/bin/setxkbmap -option 'ctrl:nocaps'"
 ```
 
 ## Controlling brightness from command line
