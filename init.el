@@ -306,3 +306,5 @@ With argument ARG, do this that many times."
 (size-indication-mode 1)
 
 (add-hook 'org-mode-hook 'org-indent-mode)
+
+(global-set-key (kbd "C-x C-x") 'kill-current-buffer)
