@@ -868,6 +868,8 @@ alias tma='tmux attach-session'
 alias cp="cp -vi"
 alias mv="mv -vi"
 
+alias xpdf="xpdf -rv -papercolor '#333333'"
+
 alias ll='ls -H -N -slht -G --time-style="+%d %b %Y %H:%M"'
 alias lll='ls -N -slhtG --color --time-style="+%d %b %Y %H:%M" | less -R'
 
