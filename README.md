@@ -1567,3 +1567,8 @@ xrdb ~/.Xresources
 pkill xterm
 xterm
 ```
+
+# disable the touchpad when typing
+```bash
+synclient PalmDetect=1
+```
