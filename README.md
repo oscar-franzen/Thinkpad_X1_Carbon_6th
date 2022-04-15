@@ -1573,3 +1573,17 @@ xterm
 ```bash
 synclient PalmDetect=1
 ```
+
+# zsh: always open a new shell in the cwd of the previous shell
+Add in `~/.zshrc`:
+
+```bash
+function cd {
+    builtin cd $@
+    echo $(pwd) > ~/.last_dir
+}
+
+if [ -f ~/.last_dir ]; then
+    cd "`cat ~/.last_dir`"
+fi
+```
